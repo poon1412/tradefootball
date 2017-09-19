@@ -1,0 +1,241 @@
+﻿[
+	{
+        "_id":1,
+        "name":"West Bromwich(WBA)",
+	"city":"West Bromwich", 
+	"stadium":"Hawthorns Stadium",
+	"establish":"1878",
+	"address":"West Bromwich, West Midlands, B71 4LF",
+	"website":"http://www.wba.co.uk/",
+	"manager":"Tony Pulis"
+        },
+
+	{
+        "_id":2,
+        "name":"Arsenal",
+	"city":"London", 
+	"stadium":"Emirates Stadium",
+	"establish":"1886-01-01",
+	"address":"Emirates Stadium Ashburton Grove London",
+	"website":"http://www.arsenal.com/",
+	"manager":"Arsene Wenger"
+        },
+
+
+	{
+        "_id":3,
+        "name":"Chelsea",
+	"city":"London", 
+	"stadium":"Stamford Bridge stadium",
+	"establish":"1905-03-10",
+	"address":"Stamford Bridge, London SW6 1HS",
+	"website":"http://www.chelseafc.co.uk/",
+	"manager":"Antonio Conte"
+        },
+
+
+	{
+        "_id":4,
+        "name":"Liverpool",
+	"city":"Liverpool", 
+	"stadium":"Anfield stadium",
+	"establish":"1892",
+	"address":"Anfield Road， GB- LIVERPOOL L4 OTH",
+	"website":"http://www.liverpoolfc.tv/",
+	"manager":"Jürgen Klopp"
+        },
+
+
+	{
+        "_id":5,
+        "name":"Manchester City",
+	"city":"Manchester", 
+	"stadium":"Etihad Stadium",
+	"establish":"1880",
+	"address":"Maine Road Moss Side Manchester M14 7W",
+	"website":"https://www.mancity.com/",
+	"manager":"Pep Guardiola"
+        },
+
+
+	{
+        "_id":6,
+        "name":"Manchester United",
+	"city":"Manchester", 
+	"stadium":"Old Trafford",
+	"establish":"1878",
+	"address":"Sir Matt Busby Way, Old Trafford, GB- MANCHESTER M16 0RA",
+	"website":"http://www.manutd.com/",
+	"manager":"Jose Mourinho"
+        },
+
+
+	{
+        "_id":7,
+        "name":"Newcastle United",
+	"city":"Newcastle", 
+	"stadium":"St James Park",
+	"establish":"1881",
+	"address":"Saint James' Park， GB- NEWCASTLE-UPON-TYNE NE1 4ST",
+	"website":"http://www.nufc.co.uk/",
+	"manager":"Rafa Benitez"
+        },
+
+
+	{
+        "_id":8,
+        "name":"Southampton",
+	"city":"Southampton", 
+	"stadium":"St Marys Stadium",
+	"establish":"1885",
+	"address":"The Dell Milton Road Southampton SO15 2XH",
+	"website":"http://www.saintsfc.co.uk/",
+	"manager":"Claude Puel"
+        },
+
+
+	{
+        "_id":9,
+        "name":"Everton",
+	"city":"Liverpool", 
+	"stadium":"Goodison Park",
+	"establish":"1878",
+	"address":"Goodison Park， GB- LIVERPOOL L4 4EL",
+	"website":"http://www.evertonfc.com/",
+	"manager":"Ronald Koeman"
+        },
+
+
+	{
+        "_id":10,
+        "name":"Tottenham Hotspur",
+	"city":"London", 
+	"stadium":"Wembley Stadium",
+	"establish":"1882",
+	"address":"748 High Road， Tottenham， GB- LONDON N17 0AP",
+	"website":"http://www.spurs.co.uk/",
+	"manager":"Mauricio Pochettino"
+        },
+
+
+	{
+        "_id":11,
+        "name":"Crystal Palace",
+	"city":"London", 
+	"stadium":"Selhurst Park Stadium",
+	"establish":"1905-9-10",
+	"address":"Selhurst Park Stadium London SE25 6PU",
+	"website":"http://www.cpfc.premiumtv.co.uk/page/Home",
+	"manager":"Roy Hodgson"
+        },
+
+
+	{
+        "_id":12,
+        "name":"Burnley",
+	"city":"Burnley", 
+	"stadium":"Turf Moor Stadium",
+	"establish":"1882",
+	"address":"Burnley BB10 4BX",
+	"website":"http://www.burnleyfootballclub.com/",
+	"manager":"Sean Dyche"
+        },
+
+
+	{
+        "_id":13,
+        "name":"Watford",
+	"city":"Hertford", 
+	"stadium":"Vicarage Road Stadium",
+	"establish":"1881",
+	"address":"Vicarage Road Stadium, Vicarage Road, Watford, Herts, WD18 0ER",
+	"website":"http://www.watfordfc.com/",
+	"manager":"Marco Silva"
+        },
+
+
+	{
+        "_id":14,
+        "name":"Stoke City",
+	"city":"Stoke-on-Trent", 
+	"stadium":"Britannia Stadium",
+	"establish":"1863-1-1",
+	"address":"Britannia Stadium, Stanley Matthews Way, Trentham Lakes, Stoke-on-Trent, Staffordshire, ST4 4EG",
+	"website":"http://www.stokecityfc.com/",
+	"manager":"Mark Hughes"
+        },
+
+
+	{
+        "_id":15,
+        "name":"Leicester City",
+	"city":"Leicester", 
+	"stadium":"King Power Stadium",
+	"establish":"1884",
+	"address":"City Stadium， Filbert Street， GB- LEICESTER LE2 7FL",
+	"website":"http://www.lcfc.com/",
+	"manager":"CRAIG SHAKESPEARE"
+        },
+
+
+	{
+        "_id":16,
+        "name":"Brighton Hove Albion",
+	"city":"Brighton", 
+	"stadium":"Falmer Stadium",
+	"establish":"1901",
+	"address":"Brighton & Hove Albion Football Club Derek ALLEN Northwest Suite Eighth Floor Tower Point 44 North R",
+	"website":"http://www.seagulls.co.uk/",
+	"manager":"Chris Hilton"
+        },
+
+
+	{
+        "_id":17,
+        "name":"West Ham United",
+	"city":"London", 
+	"stadium":"Boleyn Ground",
+	"establish":"1895",
+	"address":"Boleyn Ground， Green Street， Upton Park， GB- LONDON E13 9AZ",
+	"website":"http://www.whufc.com/",
+	"manager":"Slaven Bilic"
+        },
+
+
+	{
+        "_id":18,
+        "name":"Huddersfield Town",
+	"city":"Huddersfield", 
+	"stadium":"Galpharm Stadium",
+	"establish":"1895",
+	"address":"Leeds Road, Huddersfield HD1 6PX",
+	"website":"http://www.htafc.com/",
+	"manager":"David Warcner"
+        },
+
+
+	{
+        "_id":19,
+        "name":"Bournemouth AFC",
+	"city":"Bournemouth", 
+	"stadium":"Dean Court",
+	"establish":"1899",
+	"address":"Bournemouth Football Club Mrs Mandy VAUGHAN 33 Kings Park Road BOURNEMOUTH BH7 7AE United Kingdom",
+	"website":"http://www.afcb.co.uk/",
+	"manager":"Eddie Howe"
+        },
+
+
+	{
+        "_id":20,
+        "name":"Swansea City",
+	"city":"Swansea", 
+	"stadium":"Liberty Stadium",
+	"establish":"1912",
+	"address":"Swansea City Football Club Ms Vicki TOWNSEND Vetch Field Glamorgan Street ABERTAWE SA1 3SU United Kingdom",
+	"website":"http://www.swanseacity.net/",
+	"manager":"Clement Paul"
+        }
+
+
+]
