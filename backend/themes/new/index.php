@@ -37,7 +37,7 @@ use yii\helpers\Html;
 </head>
 
 
-<body class="demo-3 loading">
+<body class="demo-3 render">
 
 <?php $this->beginBody() ?>
 
