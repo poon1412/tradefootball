@@ -4,7 +4,7 @@
 
 $this->title = 'index';
 $this->registerCssFile ( "@web/assets/semantic/slider.css" );
-
+$this->registerCssFile ( "@web/assets/semantic/site.css" );
 $this->registerJsFile('@web/assets/semantic/slider.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 
@@ -18,10 +18,10 @@ $baseUrl = \Yii::getAlias('@web');
 	<br></br>
 	<br></br>
     <div class="" id="logout" >
-      			<button class="ui yellow button inverted">Login</button>
+      			<button id="img-btn3" class="ui yellow button inverted">Login</button>
     </div><br><br><br>
-    <button class="ui yellow button"><i class="icon user"></i>Player</button>
-    <button class="ui yellow button"><i class="icon Soccer"></i>Team</button>
+    <button id="img-btn1" class="ui yellow button"><i class="icon user"></i>Player</button>
+    <button id="img-btn2" class="ui yellow button"><i class="icon Soccer"></i>Team</button>
 </div>
 
 
