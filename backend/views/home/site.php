@@ -9,14 +9,9 @@ $baseUrl = \Yii::getAlias('@web/assets');
 ?>
 <div class="ui container">
 
-      <div class="ui two column  grid">
-  <div class="column"></div>
-  <div class="four column left aligned row">
-    <div class="column"><div class="ui red button">
-          <i class="heart icon"></i> Like
-        </div> </div>
-        <img src="<?=$baseUrl."/logo/logo.png"?>" alt="">
-
-  </div>
-</div>
+    <a href="<?php echo "http://localhost/tradefootball/backend/web/home/site"; ?>"><img src="<?=$baseUrl."/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
+    <a href="<?php echo "http://localhost/tradefootball/backend/web/home/player"; ?>"><button class="ui button">Player</button></a>
+    <a href="<?php echo "http://localhost/tradefootball/backend/web/home/team"; ?>"><button class="ui button">Team</button></a>
+    <button class="ui button">Button</button>
+    <button class="ui button">Button</button>
 </div>

@@ -5,7 +5,10 @@
 $this->title = 'index';
 $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
+$baseUrl = \Yii::getAlias('@web/assets');
 ?>
+<a href="<?php echo "http://localhost/tradefootball/backend/web/home/site"; ?>"><img src="<?=$baseUrl."/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
+
 </br>
 <div class="ui six column grid">
   <div class="row">
