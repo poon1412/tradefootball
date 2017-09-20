@@ -5,7 +5,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
-use backend\models\Customer;
+use backend\models\Team;
 /**
  * Site controller
  */
@@ -44,12 +44,9 @@ class AuthController extends Controller
     {
         return $this->render('index');
     }
-    public function actionRegister()
-    {
-        return $this->render('register');
-    }
     public function actionLogin()
     {
+      $this->layout = "@backend/themes/new/site";
     	return $this->render('login');
     }
     public function actionLoginaction()
