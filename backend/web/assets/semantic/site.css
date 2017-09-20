@@ -1,0 +1,41 @@
+div.relative {
+    position: relative;
+    width: 1200px;
+    height: 200px;
+    left: 50px;
+}
+
+#img-btn1 {
+  position: absolute;
+  z-index: 15;
+  /*top: 20%;*/
+  left: 200px;
+  /*width: 200px;*/
+}
+#img-btn2 {
+  position: absolute;
+  z-index: 15;
+  /*top: 20%;*/
+  left: 100px;
+  /*width: 100px;*/
+}
+#img-btn3 {
+  position: absolute;
+  z-index: 15;
+  top: 20%;
+  right: 10px;
+  width: 50px;
+}
+#img-fix {
+  position: absolute;
+  z-index: 15;
+  top: 20%;
+  left: 100px;
+  width: 200px;
+}
+#logout{
+  position: absolute;
+  z-index: 15;
+  top: 20%;
+  left: 90%;
+}
