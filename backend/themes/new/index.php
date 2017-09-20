@@ -26,13 +26,13 @@ use yii\helpers\Html;
     $this->registerCssFile ( "@web/assets/HomeCSS/css/normalize.css" );
     $this->registerCssFile ( "@web/assets/HomeCSS/css/demo.css" );
     $this->registerCssFile ( "@web/assets/HomeCSS/css/btt.css" );
-    $this->registerJsFile('@web/assets/HomeCSS/css/swing.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-    $this->registerJsFile('@web/assets/HomeCSS/css/sreach.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-    $this->registerJsFile('@web/assets/HomeCSS/css/imagesloaded.pkgd.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-    $this->registerJsFile('@web/assets/HomeCSS/css/demo3.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-    $this->registerJsFile('@web/assets/HomeCSS/css/demo.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-    $this->registerJsFile('@web/assets/HomeCSS/css/charming.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-    $this->registerJsFile('@web/assets/HomeCSS/css/anime.min.js',['depends' => [\yii\web\JqueryAsset::className()]]); ?>
+    $this->registerJsFile('@web/assets/HomeCSS/js/swing.js',['depends' => [\yii\web\JqueryAsset::className()]]);
+    $this->registerJsFile('@web/assets/HomeCSS/js/sreach.js',['depends' => [\yii\web\JqueryAsset::className()]]);
+    $this->registerJsFile('@web/assets/HomeCSS/js/imagesloaded.pkgd.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
+    $this->registerJsFile('@web/assets/HomeCSS/js/demo3.js',['depends' => [\yii\web\JqueryAsset::className()]]);
+    $this->registerJsFile('@web/assets/HomeCSS/js/demo.js',['depends' => [\yii\web\JqueryAsset::className()]]);
+    $this->registerJsFile('@web/assets/HomeCSS/js/charming.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
+    $this->registerJsFile('@web/assets/HomeCSS/js/anime.min.js',['depends' => [\yii\web\JqueryAsset::className()]]); ?>
     <script>document.documentElement.className = 'js';</script>
 </head>
 
