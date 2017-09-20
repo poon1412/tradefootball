@@ -6,7 +6,7 @@ $this->title = 'index';
 $this->registerCssFile ( "@web/assets/semantic/slider.css" );
 $this->registerJsFile('@web/assets/semantic/slider.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 
-$baseUrl = \Yii::getAlias('@web/assets');
+$baseUrl = \Yii::getAlias('@web');
 ?>
 
 

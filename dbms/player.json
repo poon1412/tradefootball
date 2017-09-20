@@ -1946,7 +1946,7 @@
   "position":"Forward",
   "number":9,
   "country":"England",
-  "_idteam":14
+  "_idteam":14,
   "img":"/assets/playerimg/130.jpg"
   },
   {
@@ -2336,7 +2336,7 @@
   "position":"Defender",
   "number":21,
   "country":"Italy",
-  "_idteam":17
+  "_idteam":17,
   "img":"/assets/playerimg/156.jpg"
   },
   {

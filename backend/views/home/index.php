@@ -5,8 +5,8 @@
 $this->title = 'HOME';
 
 ?>
-<?php  $baseUrl = \Yii::getAlias('@web/assets'); ?>
-<img class="bg" src="<?=$baseUrl."/logo/bg.jpg"?>" alt="">
+<?php  $baseUrl = \Yii::getAlias('@web'); ?>
+<img class="bg" src="<?=$baseUrl."/assets/logo/bg.jpg"?>" alt="">
 
 <!--
 <div class="container" >
@@ -43,13 +43,13 @@ $this->title = 'HOME';
   <div class="row" id="outPopUp">
        <div class="column" >
          <h1 class="header ">
-           <img class="sm" src="<?=$baseUrl."/logo/logo.png"?>" alt="">
+           <img class="sm" src="<?=$baseUrl."/assets/logo/logo.png"?>" alt="">
          </h1>
        </div>
   </div>
   <div class="column" id="outPopUp2">
     <div class="ui inverted blue button huge" >
-      Enter  site
+      <a href="<?=$baseUrl."/home/site"?>">Enter  site</a>
       <i class="right Trophy icon"></i>
     </div>
   </div>

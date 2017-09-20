@@ -1,11 +1,12 @@
 <?php
 namespace backend\controllers;
-
+use yii\data\Pagination;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use backend\models\Player;
 
 class HomeController extends Controller
 {
@@ -37,7 +38,31 @@ public function behaviors()
     }
     public function actionPlayer()
     {
+      $request = Yii::$app->request;
+    	$search = $request->get('search',null);
+
+
+    	$query = Player::find();
+    	if($search != null){
+    		$query->where(["name" => $search]);
+    	}
+    	$result = $query->all();
+      $pagination = new Pagination([
+                  'defaultPageSize' => 6,
+                  'totalCount' => $query->count(),
+              ]);
+
+              $result = $query->orderBy('_id')
+                  ->offset($pagination->offset)
+                  ->limit($pagination->limit)
+                  ->all();
+
       $this->layout = "@backend/themes/new/site";
-      return $this->render('player');
+        return $this->render('player', [
+       		'input' => $search,
+          'result' => $result,
+          'pagination' => $pagination,
+        ]);
+
     }
 }
