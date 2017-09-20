@@ -6,7 +6,7 @@ $this->title = 'index';
 $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
 $this->registerCssFile ( "@web/assets/semantic/team.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-$baseUrl = \Yii::getAlias('@web/assets');
+$baseUrl = \Yii::getAlias('@web');
 ?>
 
 <!-- btn logout -->
@@ -17,3 +17,11 @@ $baseUrl = \Yii::getAlias('@web/assets');
       </button>
     </div>
   </div>
+
+
+<!-- img logo team manager -->
+<img  id="img-logo" src="<?=$baseUrl."/assets/logo/manyou.png"?>" alt="">
+<button  id="btn1" class="ui inverted blue button huge">Trade</button>
+<button  id="btn2" class="ui inverted blue button huge">Edit Player</button>
+<button  id="btn3" class="ui inverted blue button huge">Edit Team</button>
+<button  id="btn4" class="ui inverted blue button huge">Message</button>

@@ -1,3 +1,67 @@
+div.bg {
+    position: relative;
+    width: 80%;
+    height: 60%;
+    left: 10%;
+		top: 20%;
+		border: 3px solid #73AD21;
+}
+#img-logo {
+  position: absolute;
+  z-index: 15;
+  top: 10%;
+  left: 33.33%;
+}
+#btn1 {
+  position: absolute;
+  z-index: 15;
+  top: 70%;
+  left: 25%;
+}
+#btn2 {
+  position: absolute;
+  z-index: 15;
+  top: 70%;
+  left: 35%;
+}
+#btn3 {
+  position: absolute;
+  z-index: 15;
+  top: 70%;
+  left: 49%;
+}
+#btn4 {
+  position: absolute;
+  z-index: 15;
+  top: 70%;
+  left: 62%;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+	#img-logo{
+		width: 300px;
+		height: 300px;
+	}
+	#btn1 {
+    left: 19%;
+  }
+	#btn2 {
+    left: 32%;
+  }
+	#btn3 {
+    left: 50%;
+  }
+	#btn4 {
+    left: 67%;
+  }
+}
+div.img-logo{
+	position: relative;
+	left: 33.33%;
+	width: 30%;
+	height: 50%;
+	border: 2px solid #73AD21;;
+}
 .btt-footer{
 	margin-top: 460px;
   margin-left: auto;
