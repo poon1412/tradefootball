@@ -61,15 +61,16 @@ class AuthController extends Controller
     {
       //config
       $request = Yii::$app->request;
+      $session = Yii::$app->session;
       $baseUrl = \Yii::getAlias('@web');
       $username = $request->post('username',null);
       $pass = $request->post('password',null);
       $team = Team::findOne(['username'=>$username]);
-      if(isset($customer) && ( $team == $team->password ))
+      if(isset($team) && ( $pass == $team->password ))
       {
           $session->set('user', $team);
           // $session->setFlash('success', " ยินดีต้อนรับเข้าสู่ระบบ");
-          return $this->redirect($baseUrl."/");
+          return $this->redirect($baseUrl."/team/index");
         }
         else {
           // $session->setFlash('danger', " ชื่อใช้หรือรหัสผ่านไม่ถูก กรุณาเข้าสู่ระบบใหม่อีกครั้ง");
