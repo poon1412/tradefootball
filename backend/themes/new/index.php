@@ -10,34 +10,23 @@ use yii\helpers\Html;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Morphing Page Transition | Demo 3 | Codrops</title>
+		<title>home</title>
 		<meta name="description" content="A page transition where one SVG path is morphed into another" />
 		<meta name="keywords" content="page transition, svg, morph, path, javascript, web design, web dev" />
 		<meta name="author" content="Codrops" />
 
+		<?php $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
+		$this->registerCssFile ( "@web/assets/semantic/home.css" );
+		$this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]); ?>
   <!-- Site Properties -->
-  <title>Homepage - TradeFootball</title>
+  <title>TradeFootball</title>
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-    <?php $this->registerCssFile ( "@web/assets/HomeCSS/css/swing.css" );
-    $this->registerCssFile ( "@web/assets/HomeCSS/css/style7.css" );
-    $this->registerCssFile ( "@web/assets/HomeCSS/css/sreach.css" );
-    $this->registerCssFile ( "@web/assets/HomeCSS/css/normalize.css" );
-    $this->registerCssFile ( "@web/assets/HomeCSS/css/demo.css" );
-    $this->registerCssFile ( "@web/assets/HomeCSS/css/btt.css" );
-    $this->registerJsFile('@web/assets/HomeCSS/js/swing.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-    $this->registerJsFile('@web/assets/HomeCSS/js/sreach.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-    $this->registerJsFile('@web/assets/HomeCSS/js/imagesloaded.pkgd.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-    $this->registerJsFile('@web/assets/HomeCSS/js/demo3.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-    $this->registerJsFile('@web/assets/HomeCSS/js/demo.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-    $this->registerJsFile('@web/assets/HomeCSS/js/charming.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-    $this->registerJsFile('@web/assets/HomeCSS/js/anime.min.js',['depends' => [\yii\web\JqueryAsset::className()]]); ?>
-    <script>document.documentElement.className = 'js';</script>
 </head>
 
 
-<body class="demo-3 render">
+<body>
 
 <?php $this->beginBody() ?>
 

@@ -1,0 +1,71 @@
+.btt-footer{
+	margin-top: 460px;
+  margin-left: auto;
+  overflow: hidden;
+}
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+.btn-home{
+   padding: 50px 100px;
+   font-size: 116px;
+}
+
+#outPopUp {
+  position: absolute;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px -120px;
+
+}
+#outPopUp2 {
+  position: absolute;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -60px -120px;
+
+}
+
+h1 .big{
+  color: red;
+}
+
+img.sm {
+  /* Set rules to fill background */
+  min-height: 10%;
+  min-width: 10px;
+
+  /* Set up proportionate scaling */
+  width: 24%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 20%;
+  left: 37%;
+}
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
