@@ -13,11 +13,12 @@ $baseUrl = \Yii::getAlias('@web/');
 
 <div class="relative">
   <br></br>
-      <a href="<?php echo "http://localhost/tradefootball/backend/web/home/site"; ?>"><img src="<?=$baseUrl."/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
+  <!-- base URL -->
+       <img id="img-fix" class="sm" src="<?=$baseUrl."/assets/logo/logo.png"?>" alt="">
 	<br></br>
 	<br></br>
     <div class="" id="logout" >
-      			<button class="ui yellow button">Login</button>
+      			<button class="ui yellow button inverted">Login</button>
     </div><br><br><br>
     <button class="ui yellow button"><i class="icon user"></i>Player</button>
     <button class="ui yellow button"><i class="icon Soccer"></i>Team</button>

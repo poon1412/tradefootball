@@ -2,6 +2,20 @@ body{
   overflow: hidden;
   height: 100%;
 }
+.ui.circular.button {
+    border-radius: 10em;
+}
+.ui.circular.button>.icon {
+    width: 1em;
+    vertical-align: baseline;
+}
+#img-fix {
+  position: absolute;
+  z-index: 15;
+  top: 20%;
+  /*left: 10%;*/
+  width: 200px;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 div.relative {
@@ -36,7 +50,7 @@ div.right-login{
     box-shadow: 0 0 0 0 rgba(34,36,38,.15) inset;
 }
 .ui.yellow.button, .ui.yellow.buttons .button {
-    background-color: #fbbd08;
+    background-color: #08e7fb;
     color: #fff;
     text-shadow: none;
     background-image: none;
@@ -45,12 +59,12 @@ div.right-login{
     font-size: 1rem;
 }
 .ui.yellow.button:active, .ui.yellow.buttons .button:active {
-    background-color: #cd9903;
+    background-color: #0d56ad;
     color: #fff;
     text-shadow: none;
 }
 .ui.yellow.button:hover, .ui.yellow.buttons .button:hover {
-    background-color: #eaae00;
+    background-color: #0d56ad;
     color: #fff;
     text-shadow: none;
 }
