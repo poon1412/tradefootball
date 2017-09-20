@@ -3,10 +3,34 @@ use yii\widgets\LinkPager;
 /* @var $this yii\web\View */
 
 $this->title = 'index';
+
 $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/reset.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/site.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/container.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/grid.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/header.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/image.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/menu.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/divider.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/segment.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/form.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/input.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/button.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/list.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/message.css" );
+$this->registerCssFile ( "@web/assets/semantic/components/icon.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 $baseUrl = \Yii::getAlias('@web');
 ?>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <a href="<?=$baseUrl."/home/site"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
 
@@ -17,16 +41,18 @@ $baseUrl = \Yii::getAlias('@web');
   <div class="four wide column"></div>
   <div class="four wide column"></div>
   <div class="four wide column"></div>
+  <form  action="" method="get">
   <div class="ui category search">
   <div class="ui icon input">
-    <input class="prompt" type="text" placeholder="Search...">
+    <input class="prompt" type="text" name="search" placeholder="Search...">
     <i class="search icon"></i>
   </div>
   <div class="results"></div>
 </div>
+</from>
 </div>
 <br>
-  <table class="ui celled table stackable">
+  <table class="ui celled table">
   <thead>
     <tr>
     <th>NAME</th>
@@ -57,11 +83,11 @@ $baseUrl = \Yii::getAlias('@web');
       </tr>
     <?php endforeach; ?>
   </tbody>
-  <tfoot>
-    <?= LinkPager::widget(['pagination' => $pagination]) ?>
-  </tfoot>
 </table>
 
-  </div>
+		<?= LinkPager::widget(['pagination' => $pagination]) ?>
+
+
+</div>
 </div>
 </div>
