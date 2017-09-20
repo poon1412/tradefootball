@@ -207,7 +207,7 @@
   "number":2,
   "country":"Cameroon",
   "_idteam" :1,
-  "img":"/playerimg/14.jpg"
+  "img":"/assets/playerimg/14.jpg"
   },
   {
   "_id":15,
@@ -222,7 +222,7 @@
   "number":40,
   "country":"England",
   "_idteam" :1,
-  "img":"/playerimg/15.jpg"
+  "img":"/assets/playerimg/15.jpg"
   },
   {
   "_id":16,
@@ -282,7 +282,7 @@
   "number":11,
   "country":"Northern Ireland",
   "_idteam" :1,
-  "img":"/playerimg/19.jpg"
+  "img":"/assets/playerimg/19.jpg"
   },
   {
   "_id":20,
@@ -297,7 +297,7 @@
   "number":14,
   "country":"Republic of Ireland",
   "_idteam" :1,
-  "img":"/playerimg/20.jpg"
+  "img":"/assets/playerimg/20.jpg"
   },
   {
   "_id":21,
@@ -1302,7 +1302,7 @@
   "number":1,
   "country":"France",
   "_idteam":11,
-  "img":"/playerimg/86.jpg"
+  "img":"/assets/playerimg/86.jpg"
   },
   {
   "_id":88,
@@ -1317,7 +1317,7 @@
   "number":2,
   "country":"France",
   "_idteam":11,
-  "img":"/playerimg/87.jpg"
+  "img":"/assets/playerimg/87.jpg"
   },
   {
   "_id":89,
