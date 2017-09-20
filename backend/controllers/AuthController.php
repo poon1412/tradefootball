@@ -68,11 +68,11 @@ class AuthController extends Controller
       if(isset($customer) && ( $team == $team->password ))
       {
           $session->set('user', $team);
-          $session->setFlash('success', " ยินดีต้อนรับเข้าสู่ระบบ");
+          // $session->setFlash('success', " ยินดีต้อนรับเข้าสู่ระบบ");
           return $this->redirect($baseUrl."/");
         }
         else {
-          $session->setFlash('danger', " ชื่อใช้หรือรหัสผ่านไม่ถูก กรุณาเข้าสู่ระบบใหม่อีกครั้ง");
+          // $session->setFlash('danger', " ชื่อใช้หรือรหัสผ่านไม่ถูก กรุณาเข้าสู่ระบบใหม่อีกครั้ง");
           return $this->redirect($baseUrl."/auth/login");
         }
     }

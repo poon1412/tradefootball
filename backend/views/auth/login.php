@@ -2,9 +2,7 @@
 $this->title = 'login';
 
 $baseUrl=\Yii::getAlias('@web');
-if (isset($session->hasFlash('danger'))) {
-  echo $session->getFlash('danger');
-}
+
 
  ?>
 

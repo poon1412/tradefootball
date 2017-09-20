@@ -5,6 +5,8 @@ use yii\helpers\Html;
 /* @var $content string */
 // dmstr\web\AdminLteAsset::register($this);
 ?>
+
+
 <?php $this->beginPage() ?>
 
 <html lang="en" class="no-js">
