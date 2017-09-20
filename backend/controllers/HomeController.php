@@ -7,6 +7,7 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
 use backend\models\Player;
+use backend\models\Team;
 
 class HomeController extends Controller
 {
@@ -28,8 +29,12 @@ public function behaviors()
     }
     public function actionSite()
     {
+      $query = Team::find();
+      $result = $query->all();
       $this->layout = "@backend/themes/new/site";
-      return $this->render('site');
+        return $this->render('site', [
+          'result' => $result,
+        ]);
     }
     public function actionTeam()
     {

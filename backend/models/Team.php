@@ -21,13 +21,13 @@ class Team extends \yii\mongodb\ActiveRecord
             'manager',
             'username',
         	  'password',
-
+            'img',
         ];
     }
     public function rules()
    {
        return [
-           [['_id', 'name', 'city','stadium', 'address', 'website','manager', 'username','password'], 'safe']
+           [['_id', 'name', 'city','stadium', 'address', 'website','manager', 'username','password','img'], 'safe']
        ];
    }
 }

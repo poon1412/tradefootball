@@ -23,12 +23,13 @@ class Player extends \yii\mongodb\ActiveRecord
         	  'number',
             'country',
             '_idteam',
+            'img',
         ];
     }
     public function rules()
    {
        return [
-           [['_id', 'name', 'lname','age', 'weight', 'height','D_M_Y', 'team','position','number','country','_idteam'], 'safe']
+           [['_id', 'name', 'lname','age', 'weight', 'height','D_M_Y', 'team','position','number','country','_idteam','img'], 'safe']
        ];
    }
 }

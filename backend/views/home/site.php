@@ -8,7 +8,7 @@ $this->registerCssFile ( "@web/assets/semantic/slider.css" );
 $this->registerJsFile('@web/assets/semantic/slider.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 
-$baseUrl = \Yii::getAlias('@web/');
+$baseUrl = \Yii::getAlias('@web');
 ?>
 
 <div class="relative">
@@ -31,17 +31,19 @@ $baseUrl = \Yii::getAlias('@web/');
   <div class="slider-wrapper flex">
 
     <!-- query -->
+    <?php foreach ($result as $var): ?>
     <div class="slide flex">
-      <div class="slide-image slider-link prev"><img src="https://goranvrban.com/codepen/img2.jpg">
+      <div class="slide-image slider-link prev"><img src="<?=$baseUrl.$var['img']?>" width="100px" height="400px">
         <div class="overlay"></div>
       </div>
       <div class="slide-content black">
-        <div class="slide-date">30.07.2017.</div>
-        <div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
-        <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
-        <div class="slide-more">READ MORE</div>
+        <div class="slide-title"><?= $var['name'] ?></div>
+        <div class="slide-text">City :<?= $var['city']?><br> Stadium : <?= $var['stadium']?><br> Establish : <?= $var['establish']?><br> Address : <?= $var['address']?></div>
+        <div class="slide-text">Manager :<?= $var['manager']?></div>
+        <div class="slide-more"><a href="<?= $var['website']?>">VISIT SITE</a></div>
       </div>
     </div>
+    <?php endforeach; ?>
     <!-- end query -->
 
   </div>
