@@ -6,6 +6,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use yii\web\NotFoundHttpException;
 use backend\models\Player;
 class TeamController extends Controller
 {
@@ -31,6 +32,17 @@ public function behaviors()
       return $this->render('team');
     }
 
+    public function actionEditplayer()
+    {
+      $request = Yii::$app->request;
+      $id = $request->get('id',null);
+      $model = Player::findOne($id);
+      $this->layout = "@backend/themes/new/site";
+      return $this->render('editplayer', [
+        'model' => $model
+      ]);
+
+    }
     public function actionPlayer()
     {
       $id=6;
@@ -61,11 +73,7 @@ public function behaviors()
           'pagination' => $pagination,
         ]);
     }
-    public function actionEditplayer()
-    {
-      $this->layout = "@backend/themes/new/site";
-      return $this->render('editplayer');
-    }
+
 
 
 }

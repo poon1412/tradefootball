@@ -10,7 +10,7 @@
 				"manager":"Tony Pulis",
 				"username" :"wba",
     		"password" :"wba",
-				"img" :"/teamimg/assets/1.png"
+				"img" :"/assets/teamimg/1.png"
     },
 
 		{
@@ -24,7 +24,7 @@
 				"manager":"Arsene Wenger",
 				"username" :"ars",
     		"password" :"ars",
-				"img" :"/teamimg/assets/2.png"
+				"img" :"/assets/teamimg/2.png"
     },
 
 		{
@@ -38,7 +38,7 @@
 				"manager":"Antonio Conte",
 				"username" :"chl",
     		"password" :"chl",
-				"img" : "/teamimg/assets/3.png"
+				"img" : "/assets/teamimg/3.png"
     },
 
 
@@ -53,7 +53,7 @@
 				"manager":"Jürgen Klopp",
 				"username" :"liv",
     		"password" :"liv",
-				"img" :"/teamimg/assets/4.png"
+				"img" :"/assets/teamimg/4.png"
     },
 
 		{
@@ -67,7 +67,7 @@
 				"manager":"Pep Guardiola",
 				"username" :"mnc",
     		"password" :"mnc",
-				"img" :"/teamimg/assets/5.png"
+				"img" :"/assets/teamimg/5.png"
     },
 
 		{
@@ -81,7 +81,7 @@
 				"manager":"Jose Mourinho",
 				"username" :"mnu",
     		"password" :"mnu",
-				"img" :"/teamimg/assets/6.png"
+				"img" :"/assets/teamimg/6.png"
     },
 
 		{
@@ -95,7 +95,7 @@
 				"manager":"Rafa Benitez",
 				"username" :"ncu",
     		"password" :"ncu",
-				"img" :"/teamimg/assets/7.png"
+				"img" :"/assets/teamimg/7.png"
     },
 
 		{
@@ -109,7 +109,7 @@
 				"manager":"Claude Puel",
 				"username" :"stt",
     		"password" :"stt",
-				"img" :"/teamimg/assets/8.png"
+				"img" :"/assets/teamimg/8.png"
     },
 
 		{
@@ -123,7 +123,7 @@
 				"manager":"Ronald Koeman",
 				"username" :"evt",
     		"password" :"evt",
-				"img" :"/teamimg/assets/9.png"
+				"img" :"/assets/teamimg/9.png"
     },
 
 		{
@@ -137,7 +137,7 @@
 				"manager":"Mauricio Pochettino",
 				"username" :"tth",
     		"password" :"tth",
-				"img" :"/teamimg/assets/10.png"
+				"img" :"/assets/teamimg/10.png"
     },
 
 		{
@@ -151,7 +151,7 @@
 				"manager":"Roy Hodgson",
 				"username" :"ctp",
     		"password" :"ctp",
-				"img" :"/teamimg/assets/11.png"
+				"img" :"/assets/teamimg/11.png"
     },
 
 
@@ -166,7 +166,7 @@
 				"manager":"Sean Dyche",
 				"username" :"bl",
     		"password" :"bl",
-				"img" :"/teamimg/assets/12.png"
+				"img" :"/assets/teamimg/12.png"
     },
 
 		{
@@ -180,7 +180,7 @@
 				"manager":"Marco Silva",
 				"username" :"wf",
     		"password" :"wf",
-				"img" :"/teamimg/assets/13.png"
+				"img" :"/assets/teamimg/13.png"
     },
 
 		{
@@ -194,7 +194,7 @@
 				"manager":"Mark Hughes",
 				"username" :"stc",
     		"password" :"stc",
-				"img" :"/teamimg/assets/14.png"
+				"img" :"/assets/teamimg/14.png"
     },
 
 		{
@@ -208,7 +208,7 @@
 				"manager":"CRAIG SHAKESPEARE",
 				"username" :"lcc",
     		"password" :"lcc",
-				"img" :"/teamimg/assets/15.png"
+				"img" :"/assets/teamimg/15.png"
     },
 
 		{
@@ -222,7 +222,7 @@
 				"manager":"Chris Hilton",
 				"username" :"bha",
     		"password" :"bha",
-				"img" :"/teamimg/assets/16.png"
+				"img" :"/assets/teamimg/16.png"
     },
 
 		{
@@ -236,7 +236,7 @@
 				"manager":"Slaven Bilic",
 				"username" :"whu",
     		"password" :"whu",
-				"img" :"/teamimg/assets/17.png"
+				"img" :"/assets/teamimg/17.png"
     },
 
 		{
@@ -250,7 +250,7 @@
 				"manager":"David Warcner",
 				"username" :"hdf",
     		"password" :"hdf",
-				"img" :"/teamimg/assets/18.png"
+				"img" :"/assets/teamimg/18.png"
     },
 
 		{
@@ -264,7 +264,7 @@
 				"manager":"Eddie Howe",
 				"username" :"afc",
     		"password" :"afc",
-				"img" :"/teamimg/assets/19.png"
+				"img" :"/assets/teamimg/19.png"
     },
 
 		{
@@ -278,7 +278,7 @@
 				"manager":"Clement Paul",
 				"username" :"swc",
     		"password" :"swc",
-				"img" :"/teamimg/assets/20.png"
+				"img" :"/assets/teamimg/20.png"
     }
 
 

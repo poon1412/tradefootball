@@ -5,7 +5,7 @@
 $this->title = 'index';
 $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-$baseUrl = \Yii::getAlias('@web/assets');
+$baseUrl = \Yii::getAlias('@web');
 ?>
 
 </br></br>
@@ -14,7 +14,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
     <div class="column"></div>
 
     <div class="two wide column">
-      <img src="https://lh3.googleusercontent.com/pP9v-M7D7BVLaFQHpiIu7u7AYzSBmv-NDF0nt-70shB83wW2MZtzvJdsIwbQf3YmkEA=w170" alt="" width="130" height="90">
+      <img src="<?=$baseUrl.$model['img']?>" alt="" width="130" height="90">
     </div>
 
     <div class="two wide column">
@@ -36,7 +36,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form ">
         <div class="inline field">
           <label>Firstname</label>
-          <input type="text" size="50" placeholder="firstname">
+          <input type="text" size="50" placeholder="<?=$model['name']?>">
         </div>
       </div>
     </div>

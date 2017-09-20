@@ -41,15 +41,17 @@ $baseUrl = \Yii::getAlias('@web');
   <div class="four wide column"></div>
   <div class="four wide column"></div>
   <div class="four wide column"></div>
-  <form  action="" method="get">
+
   <div class="ui category search">
   <div class="ui icon input">
+    <form class="" action="" method="post">
     <input class="prompt" type="text" name="search" placeholder="Search...">
     <i class="search icon"></i>
+    </form>
   </div>
   <div class="results"></div>
-  </div>
-  </from>
+</div>
+
 </div>
 <br>
   <table class="ui celled table">
@@ -66,8 +68,18 @@ $baseUrl = \Yii::getAlias('@web');
       <tr>
         <td><?= $var['name'] ?></td>
         <td><?= $var['lname'] ?></td>
-        <td><button class="ui orange button "><a href="<?=$baseUrl."/team/editplayer"?>"><i class="edit icon"></i> EDIT</a></button></td>
-        <td><button class="ui red button "><a href="<?=$baseUrl."/team/editplayer"?>"><i class="remove user icon"></i> DELETE</button></a></td>
+        <td>
+          <form class="" action="<?=$baseUrl."/team/editplayer"?>" method="get">
+          <input type="hidden" name="id" value="<?=$var['_id']?>">
+          <button class="ui orange button "><i class="edit icon"></i> EDIT</a></button>
+          </form>
+        </td>
+        <td>
+          <form class="" action="<?=$baseUrl."/team/editplayer"?>" method="get">
+          <input type="hidden" name="id" value="<?=$var['_id']?>">
+          <button class="ui red button "><i class="remove user icon"></i> DELETE</button>
+          </form>
+        </td>
       </tr>
     <?php endforeach; ?>
   </tbody>
