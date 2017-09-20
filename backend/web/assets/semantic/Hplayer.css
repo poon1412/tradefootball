@@ -1,0 +1,34 @@
+#img-logo{
+  position: relative;
+  z-index: 15;
+  top: 20%;
+  left: 10%;
+}
+.ui.yellow.button, .ui.yellow.buttons .button {
+    background-color: #08e7fb;
+    color: #fff;
+    text-shadow: none;
+    background-image: none;
+}
+.ui.yellow.button:active, .ui.yellow.buttons .button:active {
+    background-color: #0d56ad;
+    color: #fff;
+    text-shadow: none;
+}
+.ui.yellow.button:hover, .ui.yellow.buttons .button:hover {
+    background-color: #0d56ad;
+    color: #fff;
+    text-shadow: none;
+}
+#b1 {
+  position: absolute;
+  z-index: 15;
+  top: 20%;
+  left: 23%;
+}
+#b2 {
+  position: absolute;
+  z-index: 15;
+  top: 20%;
+  left: 31%;
+}

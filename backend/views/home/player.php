@@ -20,6 +20,7 @@ $this->registerCssFile ( "@web/assets/semantic/components/button.css" );
 $this->registerCssFile ( "@web/assets/semantic/components/list.css" );
 $this->registerCssFile ( "@web/assets/semantic/components/message.css" );
 $this->registerCssFile ( "@web/assets/semantic/components/icon.css" );
+$this->registerCssFile ( "@web/assets/semantic/Hplayer.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 $baseUrl = \Yii::getAlias('@web');
 ?>
@@ -32,8 +33,12 @@ $baseUrl = \Yii::getAlias('@web');
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<a href="<?=$baseUrl."/home/site"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
+<br>
+<a href="<?=$baseUrl."/home/site"?>"><img id="img-logo" src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
+<button id="b1" class="ui yellow button big"><i class="icon user"></i>Player</button>
+<button id="b2" class="ui yellow button big"><i class="icon Soccer"></i>Team</button>
 
+<br>
 <br>
 </br>
 <div class="ui container">
