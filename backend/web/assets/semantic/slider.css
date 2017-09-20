@@ -107,9 +107,12 @@ div.right-login{
     width: 24vw;
     cursor: pointer;
 }
+div.black{
+  color: black;
+}
 .slide-content {
     width: 25vw;
-    color: #fff;
+    color: black;
     padding: 3vw 18vw 3vw 9vw;
 }
 .slide-date {
@@ -173,11 +176,11 @@ div.overlay-blue:hover {
     height: 1.2vw;
     background: transparent;
     text-indent: -9999px;
-    border-top: 0.15vw solid #fff;
-    border-left: 0.15vw solid #fff;
+    border-top: 0.15vw solid black;
+    border-left: 0.15vw solid black;
     transition: all .1s ease-in-out;
     text-decoration: none;
-    color: transparent;
+    color: blue;
 }
 .arrow:hover {
     border-color: #0A8ACB;

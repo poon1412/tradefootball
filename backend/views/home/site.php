@@ -34,7 +34,7 @@ $baseUrl = \Yii::getAlias('@web/');
       <div class="slide-image slider-link prev"><img src="https://goranvrban.com/codepen/img2.jpg">
         <div class="overlay"></div>
       </div>
-      <div class="slide-content">
+      <div class="slide-content black">
         <div class="slide-date">30.07.2017.</div>
         <div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
         <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
