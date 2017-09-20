@@ -49,7 +49,7 @@ class AuthController extends Controller
       $request = Yii::$app->request;
       $baseUrl = \Yii::getAlias('@web');
       $session = Yii::$app->session;
-      $this->layout = "@backend/themes/new/site";
+      $this->layout = "@backend/themes/new/login";
       if($session->has('user'))
       {
         return $this->redirect($baseUrl."/");
