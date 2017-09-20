@@ -4,33 +4,6 @@ $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 $baseUrl=\Yii::getAlias('@web');
  ?>
- <!DOCTYPE html>
- <html>
- <head>
-   <!-- Standard Meta -->
-   <meta charset="utf-8" />
-   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-   <!-- Site Properties -->
-   <title>Login Example - Semantic</title>
-   <link rel="stylesheet" type="text/css" href="../dist/components/reset.css">
-   <link rel="stylesheet" type="text/css" href="../dist/components/site.css">
-
-   <link rel="stylesheet" type="text/css" href="../dist/components/container.css">
-   <link rel="stylesheet" type="text/css" href="../dist/components/grid.css">
-   <link rel="stylesheet" type="text/css" href="../dist/components/header.css">
-   <link rel="stylesheet" type="text/css" href="../dist/components/image.css">
-   <link rel="stylesheet" type="text/css" href="../dist/components/menu.css">
-
-   <link rel="stylesheet" type="text/css" href="../dist/components/divider.css">
-   <link rel="stylesheet" type="text/css" href="../dist/components/segment.css">
-   <link rel="stylesheet" type="text/css" href="../dist/components/form.css">
-   <link rel="stylesheet" type="text/css" href="../dist/components/input.css">
-   <link rel="stylesheet" type="text/css" href="../dist/components/button.css">
-   <link rel="stylesheet" type="text/css" href="../dist/components/list.css">
-   <link rel="stylesheet" type="text/css" href="../dist/components/message.css">
-   <link rel="stylesheet" type="text/css" href="../dist/components/icon.css">
 
    <script src="assets/library/jquery.min.js"></script>
    <script src="../dist/components/form.js"></script>
@@ -77,8 +50,8 @@ $baseUrl=\Yii::getAlias('@web');
                    prompt : 'Please enter your password'
                  },
                  {
-                   type   : 'length[6]',
-                   prompt : 'Your password must be at least 6 characters'
+                   type   : 'length[1]',
+                   prompt : 'Your password must be at least 1 characters'
                  }
                ]
              }
@@ -88,23 +61,23 @@ $baseUrl=\Yii::getAlias('@web');
      })
    ;
    </script>
- </head>
- <body>
+
+
 
  <div class="ui middle aligned center aligned grid">
    <div class="column">
      <h2 class="ui teal image header">
        <img src="https://cdn.dribbble.com/users/74403/screenshots/1211840/icon-football.gif" class="image">
        <div class="content">
-         Log-in to your account
+        EPL Team Log in
        </div>
      </h2>
-     <form class="ui large form">
+     <form class="ui large form" action="<?=$baseUrl."/auth/loginaction"?>">
        <div class="ui stacked segment">
          <div class="field">
            <div class="ui left icon input">
              <i class="user icon"></i>
-             <input type="text" name="email" placeholder="E-mail address">
+             <input type="text" name="username" placeholder="Username">
            </div>
          </div>
          <div class="field">
@@ -113,7 +86,7 @@ $baseUrl=\Yii::getAlias('@web');
              <input type="password" name="password" placeholder="Password">
            </div>
          </div>
-         <div class="ui fluid large teal submit button">Login</div>
+         <div class="ui fluid large teal submit button">Log in</div>
        </div>
 
        <div class="ui error message"></div>
@@ -121,11 +94,7 @@ $baseUrl=\Yii::getAlias('@web');
      </form>
 
      <div class="ui message">
-       New to us? <a href="#">Sign Up</a>
+       <a href="https://www.premierleague.com/">Welcome to England Premier League</a>
      </div>
    </div>
  </div>
-
- </body>
-
- </html>

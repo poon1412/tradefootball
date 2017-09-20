@@ -50,7 +50,7 @@ $this->title = 'HOME';
   <div class="column" id="outPopUp2">
     <div class="ui inverted blue button huge" >
       Enter  site
-      <i class="right arrow icon"></i>
+      <i class="right Trophy icon"></i>
     </div>
   </div>
 </div>
