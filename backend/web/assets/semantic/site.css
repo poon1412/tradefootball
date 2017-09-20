@@ -23,7 +23,7 @@ div.relative {
   position: absolute;
   z-index: 15;
   top: 20%;
-  right: 10px;
+  left: 150px;
   width: 50px;
 }
 #img-fix {

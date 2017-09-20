@@ -45,7 +45,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Lastname</label>
-          <input type="text" size="50" placeholder="lastname">
+          <input type="text" size="50" placeholder="<?=$model['lname']?>">
         </div>
       </div>
     </div>
@@ -66,7 +66,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Age</label>
-          <input type="text" size="3" placeholder="age">
+          <input type="text" size="3" placeholder="<?=$model['name']?>">
         </div>
       </div>
     </div>
@@ -75,7 +75,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Weight</label>
-          <input type="text" size="3" placeholder="weight">
+          <input type="text" size="3" placeholder="<?=$model['name']?>">
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Height</label>
-          <input type="text" size="3" placeholder="height">
+          <input type="text" size="3" placeholder="<?=$model['name']?>">
         </div>
       </div>
     </div>
@@ -93,7 +93,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>D-M-Y</label>
-          <input type="text" size="10" placeholder="d/m/y">
+          <input type="text" size="10" placeholder="<?=$model['name']?>">
         </div>
       </div>
     </div>

@@ -36,7 +36,8 @@ public function behaviors()
     {
       $request = Yii::$app->request;
       $id = $request->get('id',null);
-      $model = Player::findOne($id);
+      $p=(int)$id;
+      $model = Player::findOne($p);
       $this->layout = "@backend/themes/new/site";
       return $this->render('editplayer', [
         'model' => $model

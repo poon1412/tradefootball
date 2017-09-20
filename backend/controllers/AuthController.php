@@ -52,7 +52,7 @@ class AuthController extends Controller
       $this->layout = "@backend/themes/new/login";
       if($session->has('user'))
       {
-        return $this->redirect($baseUrl."/");
+        return $this->redirect($baseUrl."/team/index");
       }else {
         return $this->render('login');
       }
@@ -82,7 +82,7 @@ class AuthController extends Controller
       $session = Yii::$app->session;
       $baseUrl = \Yii::getAlias('@web');
       $session->remove('user');
-      return $this->redirect($baseUrl."/");
+      return $this->redirect($baseUrl."/home");
     }
 
     }
