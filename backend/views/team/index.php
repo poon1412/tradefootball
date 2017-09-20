@@ -17,5 +17,3 @@ $baseUrl = \Yii::getAlias('@web/assets');
       </button>
     </div>
   </div>
-
-  

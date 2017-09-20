@@ -4,10 +4,25 @@
 
 $this->title = 'index';
 $this->registerCssFile ( "@web/assets/semantic/slider.css" );
-$this->registerJsFile('@web/assets/semantic/slider.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 
-$baseUrl = \Yii::getAlias('@web');
+$this->registerJsFile('@web/assets/semantic/slider.js',['depends' => [\yii\web\JqueryAsset::className()]]);
+$this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
+
+$baseUrl = \Yii::getAlias('@web/');
 ?>
+
+<div class="relative">
+  <br></br>
+      <a href="<?php echo "http://localhost/tradefootball/backend/web/home/site"; ?>"><img src="<?=$baseUrl."/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
+	<br></br>
+	<br></br>
+    <div class="" id="logout" >
+      			<button class="ui yellow button">Login</button>
+    </div><br><br><br>
+    <button class="ui yellow button"><i class="icon user"></i>Player</button>
+    <button class="ui yellow button"><i class="icon Soccer"></i>Team</button>
+</div>
+
 
 
 <div class="slider">
