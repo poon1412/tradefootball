@@ -7,7 +7,7 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
 
-class HomeController extends Controller
+class TeamController extends Controller
 {
 public function behaviors()
     {
@@ -28,7 +28,7 @@ public function behaviors()
     public function actionEditteam()
     {
       $this->layout = "@backend/themes/new/site";
-      return $this->render('');
+      return $this->render('team');
     }
     public function actionEditplayer()
     {
