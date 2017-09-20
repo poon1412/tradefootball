@@ -35,4 +35,9 @@ public function behaviors()
       $this->layout = "@backend/themes/new/site";
       return $this->render('team');
     }
+    public function actionPlayer()
+    {
+      $this->layout = "@backend/themes/new/site";
+      return $this->render('player');
+    }
 }
