@@ -13,8 +13,8 @@ $baseUrl = \Yii::getAlias('@web/assets');
   <div class="row">
     <div class="column"></div>
 
-    <div class="two wide column">
-      <img src="https://lh3.googleusercontent.com/pP9v-M7D7BVLaFQHpiIu7u7AYzSBmv-NDF0nt-70shB83wW2MZtzvJdsIwbQf3YmkEA=w170" alt="" width="130" height="90">
+    <div class="one wide column">
+      <img src="https://cdn1.iconfinder.com/data/icons/social-media-14/96/Evernote-128.png" alt="" width="100" height="70">
     </div>
 
     <div class="two wide column">
