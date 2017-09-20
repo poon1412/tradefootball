@@ -33,7 +33,7 @@ public function behaviors()
     public function actionEditplayer()
     {
       $this->layout = "@backend/themes/new/site";
-      return $this->render('');
+      return $this->render('player');
     }
 
 
