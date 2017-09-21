@@ -124,3 +124,14 @@ $baseUrl = \Yii::getAlias('@web/assets');
   <div class="column"></div>
   <div class="column"></div>
 </div>
+
+<div class="ui grid">
+    <div class="three wide column"></div>
+    <div class="one wide column">
+      <button class="ui grey button">Save</button>
+    </div>
+    <div class="one wide column">
+      <button class="ui grey button">Cancel</button>
+    </div>
+    <div class="three column row">
+  </div>
