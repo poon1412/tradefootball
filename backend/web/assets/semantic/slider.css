@@ -18,12 +18,7 @@ body{
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-div.relative {
-    position: relative;
-    width: 1200px;
-    height: 200px;
-    left: 50px;
-}
+
 
 
 
