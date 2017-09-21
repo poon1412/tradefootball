@@ -24,11 +24,23 @@ public function behaviors()
      */
     public function actionIndex()
     {
+      $session = Yii::$app->session;
+      $baseUrl = \Yii::getAlias('@web');
+      if(!($session->has('user')))
+      {
+        return $this->redirect($baseUrl.'/auth/login');
+      }
       $this->layout = "@backend/themes/new/index";
       return $this->render('index');
     }
     public function actionEditteam()
     {
+      $session = Yii::$app->session;
+      $baseUrl = \Yii::getAlias('@web');
+      if(!($session->has('user')))
+      {
+        return $this->redirect($baseUrl.'/auth/login');
+      }
       $this->layout = "@backend/themes/new/site";
       return $this->render('editteam');
     }
@@ -48,6 +60,11 @@ public function behaviors()
     public function actionPlayer()
     {
       $session = Yii::$app->session;
+      $baseUrl = \Yii::getAlias('@web');
+      if(!($session->has('user')))
+      {
+        return $this->redirect($baseUrl.'/auth/login');
+      }
       $user = $session->get('user');
       $id = (int)$user['_id'];
       $request = Yii::$app->request;
