@@ -54,7 +54,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Age</label>
-          <input type="number" placeholder="age">
+          <input type="number" name="age" placeholder="age">
         </div>
       </div>
     </div>
@@ -73,7 +73,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Weight</label>
-          <input type="text" placeholder="weight">
+          <input type="number" name="weight" placeholder="weight">
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Height</label>
-          <input type="text" placeholder="height">
+          <input type="number" name="height" placeholder="height">
         </div>
       </div>
     </div>
@@ -91,7 +91,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Day-Month-Year</label>
-          <input type="text" placeholder="D-M-Y">
+          <input type="text" name="D_M_Y" placeholder="D-M-Y">
         </div>
       </div>
     </div>
@@ -110,7 +110,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Position</label>
-          <input type="text" placeholder="position">
+          <input type="text" name="position" placeholder="position">
         </div>
       </div>
     </div>
@@ -119,7 +119,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Number</label>
-          <input type="text" placeholder="number">
+          <input type="number" name="number" placeholder="number">
         </div>
       </div>
     </div>
@@ -128,7 +128,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Country</label>
-          <input type="text" placeholder="country">
+          <input type="text" name="country" placeholder="country">
         </div>
       </div>
     </div>
