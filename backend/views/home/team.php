@@ -10,18 +10,22 @@ $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii
 
 $baseUrl = \Yii::getAlias('@web');
 ?>
-
+<style media="screen">
+  a{
+    color: white;
+  }
+</style>
 <div class="relative">
   <br></br>
   <!-- base URL -->
-       <img id="img-fix" class="sm" src="<?=$baseUrl."/assets/logo/logo.png"?>" alt="">
+      <a href="<?=$baseUrl."/home/site"?>"> <img id="img-fix" class="sm" src="<?=$baseUrl."/assets/logo/logo.png"?>" alt=""></a>
 	<br></br>
 	<br></br>
     <div class="" id="logout" >
-      			<button id="img-btn3" class="ui yellow button inverted">Login</button>
+      			<button id="img-btn3" class="ui yellow button inverted">  <a href="<?=$baseUrl."/auth/login"?>" >Login</a></button>
     </div><br><br><br>
-    <button id="img-btn1" class="ui yellow button"><i class="icon user"></i>Player</button>
-    <button id="img-btn2" class="ui yellow button"><i class="icon Soccer"></i>Team</button>
+    <button id="img-btn2" class="ui yellow button"><a href="<?=$baseUrl."/home/player"?>" ><i class="icon user"></i>Player</a></button>
+
 </div>
 
 

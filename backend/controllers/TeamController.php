@@ -30,7 +30,7 @@ public function behaviors()
     public function actionEditteam()
     {
       $this->layout = "@backend/themes/new/site";
-      return $this->render('team');
+      return $this->render('editteam');
     }
 
     public function actionEditplayer()

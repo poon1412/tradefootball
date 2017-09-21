@@ -31,27 +31,39 @@ $baseUrl = \Yii::getAlias('@web');
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style media="screen">
+  a{
+    color: white;
+  }
+</style>
 
-</br></br>
+<div class="Container">
+  <div class="ui grid">
+    <div class="column">
+      <div class="ui one column grid">
+        <div class="one column">
+          <br><br>
+          <a href="<?=$baseUrl."/home/site"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
+          <div class="three column">
+            <br><br><br> &nbsp;&nbsp;&nbsp;
+
+            <button  class="ui blue button big"><a href="<?=$baseUrl."/home/player"?>" ><i class="icon user"></i>Player</a></button>
+            <button  class="ui blue button big"><a href="<?=$baseUrl."/home/team"?>" ><i class="icon Soccer"></i>Team</a></button>
+
+            <button  class="ui blue button big" style="float: right;"><i class="icon lock in"></i><a href="<?=$baseUrl."/auth/login"?>" >Login</a></button>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
 <div class="ui six column grid">
   <div class="row">
     <div class="column"></div>
-
-    <div class="one wide column">
-      <img src="https://cdn1.iconfinder.com/data/icons/social-media-14/96/Evernote-128.png" alt="" width="100" height="70">
+    <div class="column"></div>
     </div>
-
-    <div class="two wide column">
-    </br>
-      <h1 class="ui header">Transfer</h1>
     </div>
-
-  </div>
-  <div class="one wide column"></div>
-  <div class="column"></div>
-  <div class="column"></div>
-</div>
-
 
 
 <div class="ui six column grid">
@@ -72,7 +84,7 @@ foreach ($result as $var): ?>
           <div class="description">
           <img class="ui mini circular image" src="<?= $baseUrl.Team::getTeam($var->_idold)['img'] ?>">
           <i class="Exchange icon"></i>
-          <img class="ui mini circular image" src="<?= $baseUrl.Team::getTeam($var->_idnew)['img'] ?>"> 
+          <img class="ui mini circular image" src="<?= $baseUrl.Team::getTeam($var->_idnew)['img'] ?>">
           </div>
         </div>
         <div class="extra content">

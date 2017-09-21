@@ -32,25 +32,29 @@ $baseUrl = \Yii::getAlias('@web');
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style media="screen">
+  a{
+    color: white;
+  }
+</style>
+<div class="Container">
+  <div class="ui grid">
+    <div class="column">
+      <div class="ui one column grid">
+        <div class="one column">
+          <br><br>
+          <a href="<?=$baseUrl."/home/site"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
+          <div class="three column">
+            <br><br><br> &nbsp;&nbsp;&nbsp;
 
-<div class="ui container">
-<div class="ui grid">
-  <div class="column">
-    <div class="ui one column grid">
-      <div class="one column">
-        <br><br>
-        <a href="<?=$baseUrl."/home/site"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
-        <div class="three column">
-          <br><br><br> &nbsp;&nbsp;&nbsp;
-          <button  class="ui yellow button big"><i class="icon user"></i>Player</button>
-          <button  class="ui yellow button big"><i class="icon Soccer"></i>Team</button>
+            <button  class="ui blue button big"><a href="<?=$baseUrl."/home/team"?>" ><i class="icon Soccer"></i>Team</a></button>
 
-          <button  class="ui yellow button big" style="float: right;"><i class="icon lock in"></i>Login</button>
-        </div>
+            <button  class="ui blue button big" style="float: right;"><i class="icon lock in"></i><a href="<?=$baseUrl."/auth/login"?>" >Login</a></button>
+          </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
+  </div>
 <br>
 
 <div class="ui container">
@@ -105,6 +109,5 @@ $baseUrl = \Yii::getAlias('@web');
 		<?= LinkPager::widget(['pagination' => $pagination]) ?>
 
 
-</div>
 </div>
 </div>
