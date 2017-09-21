@@ -1,7 +1,8 @@
 <?php
 
 /* @var $this yii\web\View */
-
+$session = Yii::$app->session;
+$user = $session->get('user');
 $this->title = 'index';
 $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
@@ -67,6 +68,7 @@ $baseUrl = \Yii::getAlias('@web');
   <div class="column"></div>
 </div>
 
+<form class="" action="<?= $baseUrl.'/team/saveteam' ?>" method="get">
 <div class="ui six column grid">
   <div class="row">
     <div class="column"></div>
@@ -75,7 +77,8 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Name team</label>
-          <input type="text" name="name" placeholder="name team">
+
+          <input type="text" name="name" placeholder="name team" value="<?= $user['name'] ?>">
         </div>
       </div>
     </div>
@@ -84,7 +87,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>City</label>
-          <input type="text" name="city" placeholder="City">
+          <input type="text" name="city" placeholder="City" value="<?= $user['city'] ?>">
         </div>
       </div>
     </div>
@@ -93,7 +96,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Stadium</label>
-          <input type="text" name="stadium" placeholder="Stadium">
+          <input type="text" name="stadium" placeholder="Stadium" value="<?= $user['stadium'] ?>">
         </div>
       </div>
     </div>
@@ -112,7 +115,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Establish</label>
-          <input type="text" name="establish" placeholder="establish">
+          <input type="text" name="establish" placeholder="establish" value="<?= $user['establish'] ?>">
         </div>
       </div>
     </div>
@@ -121,7 +124,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Address</label>
-          <input type="text" name="address" placeholder="address">
+          <input type="text" name="address" placeholder="address" value="<?= $user['address'] ?>">
         </div>
       </div>
     </div>
@@ -130,7 +133,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Website</label>
-          <input type="text" name ="website" placeholder="website">
+          <input type="text" name ="website" placeholder="website" value="<?= $user['website'] ?>">
         </div>
       </div>
     </div>
@@ -149,7 +152,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Manager</label>
-          <input type="text" name ="manager" placeholder="manager">
+          <input type="text" name ="manager" placeholder="manager" value="<?= $user['manager'] ?>">
         </div>
       </div>
     </div>
@@ -167,7 +170,7 @@ $baseUrl = \Yii::getAlias('@web');
 <div class="ui grid">
     <div class="three wide column"></div>
     <div class="four wide column">
-      <button class="ui green button"><i class="save icon"></i> Save</button>
+      <button class="ui green button"><i class="save icon"></i> Save</button></form>
       <button class="ui grey button"><i class="remove circle outline icon"></i> Cancel</button>
     </div>
 

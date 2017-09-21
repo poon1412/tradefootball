@@ -155,6 +155,38 @@ public function behaviors()
       return $this->redirect($baseUrl."/team/player");
     }
 
+    public function actionSaveteam()
+    {
+      $request = Yii::$app->request;
+      $session = Yii::$app->session;
+      $baseUrl = \Yii::getAlias('@web');
+      $user = $session->get('user');
+      $teamid = (int)$user['_id'];
+
+
+      $name = $request->get('name',null);
+      $city = $request->get('city',null);
+      $stadium = $request->get('stadium',null);
+      $establish = $request->get('establish',null);
+      $address = $request->get('address',null);
+      $website = $request->get('website',null);
+      $manager = $request->get('manager',null);
+
+      $model = Team::findOne($teamid);
+      $model->name = $name;
+      $model->city = $city;
+      $model->stadium = $stadium;
+      $model->establish = $establish;
+      $model->address = $address;
+      $model->website = $website;
+      $model->manager = $manager;
+      if($model->save()){
+        echo "success";
+      }else{
+        echo "unsuccess";
+      }
+      return $this->redirect($baseUrl."/team");
+    }
     public function actionDelete()
     {
         $baseUrl = \Yii::getAlias('@web');
@@ -180,6 +212,8 @@ public function behaviors()
       $this->layout = "@backend/themes/new/index";
       return $this->render('addplayer');
     }
+
+
 
 
 
