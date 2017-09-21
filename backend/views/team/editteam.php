@@ -38,7 +38,7 @@ $baseUrl = \Yii::getAlias('@web');
         <a href="<?=$baseUrl."/team"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
         <div class="three column">
           <br><br><br> &nbsp;&nbsp;&nbsp;
-          <button  class="ui blue button small"><i class="icon user"></i>Player</button>
+          <a href="<?=$baseUrl."/team/player"?>"><button  class="ui blue button small"><i class="icon user"></i>Player</button></a>
           <button  class="ui blue button small"><i class="icon Soccer"></i>Team</button>
           <button  class="ui blue button small"><i class="icon Exchange"></i>Trade</button>
           <button  class="ui blue button small"><i class="icon mail"></i>Message</button>
