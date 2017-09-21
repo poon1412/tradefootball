@@ -123,5 +123,4 @@ $baseUrl = \Yii::getAlias('@web');
 
 		<?= LinkPager::widget(['pagination' => $pagination]) ?>
 
-
 </div>
