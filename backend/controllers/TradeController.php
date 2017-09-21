@@ -52,12 +52,15 @@ class TradeController extends Controller
       }
       public function actionTransfer()
       {
+        $request = Yii::$app->request;
         $session = Yii::$app->session;
         $baseUrl = \Yii::getAlias('@web');
         if(!($session->has('user')))
         {
           return $this->redirect($baseUrl.'/auth/login');
         }
+        $id=(int)$request->get('id',null);
+        $model = Player::findOne($id);
         $this->layout = "@backend/themes/new/index";
         return $this->render('transfer');
       }
