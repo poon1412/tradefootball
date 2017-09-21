@@ -35,7 +35,7 @@ $baseUrl = \Yii::getAlias('@web');
   <div class="column">
     <div class="ui one column grid">
       <div class="one column">
-        <a href="<?=$baseUrl."/home/site"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
+        <a href="<?=$baseUrl."/team"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
         <div class="three column">
           <br><br><br> &nbsp;&nbsp;&nbsp;
           <button  class="ui blue button small"><i class="icon user"></i>Player</button>
