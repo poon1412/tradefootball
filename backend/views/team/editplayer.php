@@ -173,7 +173,7 @@ $baseUrl = \Yii::getAlias('@web');
     </div>
 
     <div class="one wide column">
-      <div class="five wide column">
+
         <div class="ui form ">
           <div class="inline field">
             <label>Country</label>
@@ -181,19 +181,19 @@ $baseUrl = \Yii::getAlias('@web');
           </div>
         </div>
       </div>
-    </div>
+    
   </div>
 </div>
-  
+
   <div class="ui six column grid">
   <div class="row">
     <div class="column"></div>
-  
+
   <div class="one wide column">
 
    <button class="ui primary button">Save</button>
   </div>
-  
+
 
   </form>
   <form class="" action="<?=$baseUrl."/team/player"?>" method="get">
