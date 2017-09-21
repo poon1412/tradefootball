@@ -7,20 +7,19 @@ $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 $baseUrl = \Yii::getAlias('@web/assets');
 ?>
-<a href="<?php echo "http://localhost/tradefootball/backend/web/home/site"; ?>"><img src="<?=$baseUrl."/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
 
-</br>
+</br></br>
 <div class="ui six column grid">
   <div class="row">
     <div class="column"></div>
 
-    <div class="column">
-      <img src="https://www.hcltech.com/sites/default/files/left_mu.png" alt="" width="280" height="160">
+    <div class="one wide column">
+      <img src="https://cdn1.iconfinder.com/data/icons/social-media-14/96/Evernote-128.png" alt="" width="100" height="70">
     </div>
 
-    <div class="four wide column">
+    <div class="two wide column">
     </br>
-      <h1 class="ui header">MANCHESTER UNITED</h1>
+      <h1 class="ui header">Transfer</h1>
     </div>
 
   </div>
@@ -29,65 +28,102 @@ $baseUrl = \Yii::getAlias('@web/assets');
   <div class="column"></div>
 </div>
 
-    <div class="ui six column grid">
-      <div class="row">
-        <div class="column"></div>
-        <div class="two wide column"></div>
-        <div class="two wide column"><h3>Name : </h3> </div>
-        <div class="three wide column">MANCHESTER UNITED</div>
+
+
+<div class="ui six column grid">
+  <div class="row">
+    <div class="column"></div>
+
+    <div class="column">
+      <div class="ui card">
+        <div class="image">
+          <img src="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx" alt="" width="100" height="70">
+        </div>
+        <div class="content">
+          <a class="header">Kristy</a>
+          <div class="meta">
+            <span class="date">Joined in 2013</span>
+          </div>
+          <div class="description">
+            Kristy is an art director living in New York.
+          </div>
+        </div>
+        <div class="extra content">
+          <a>
+            <i class="user icon"></i>
+              22 Friends
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="ui six column grid">
-      <div class="row">
-        <div class="column"></div>
-        <div class="two wide column"></div>
-        <div class="two wide column"><h3>City : </h3> </div>
-        <div class="one wide column">MANCHESTER</div>
+    <div class="column">
+      <div class="ui card">
+        <div class="image">
+          <img src="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx" alt="" width="100" height="70">
+        </div>
+        <div class="content">
+          <a class="header">Kristy</a>
+          <div class="meta">
+            <span class="date">Joined in 2013</span>
+          </div>
+          <div class="description">
+            Kristy is an art director living in New York.
+          </div>
+        </div>
+        <div class="extra content">
+          <a>
+            <i class="user icon"></i>
+            22 Friends
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="ui six column grid">
-      <div class="row">
-        <div class="column"></div>
-        <div class="two wide column"></div>
-        <div class="two wide column"><h3>Stadium : </h3> </div>
-        <div class="two wide column">Old Trafford</div>
+    <div class="column">
+      <div class="ui card">
+        <div class="image">
+          <img src="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx" alt="" width="100" height="70">
+        </div>
+        <div class="content">
+          <a class="header">Kristy</a>
+          <div class="meta">
+            <span class="date">Joined in 2013</span>
+          </div>
+          <div class="description">
+            Kristy is an art director living in New York.
+          </div>
+        </div>
+        <div class="extra content">
+          <a>
+            <i class="user icon"></i>
+            22 Friends
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="ui six column grid">
-      <div class="row">
-        <div class="column"></div>
-        <div class="two wide column"></div>
-        <div class="two wide column"><h3>Establish : </h3> </div>
-        <div class="two wide column">1878</div>
+    <div class="column">
+      <div class="ui card">
+        <div class="image">
+          <img src="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx" alt="" width="100" height="50">
+        </div>
+        <div class="content">
+          <a class="header">Kristy</a>
+          <div class="meta">
+            <span class="date">Joined in 2013</span>
+          </div>
+          <div class="description">
+            Kristy is an art director living in New York.
+          </div>
+        </div>
+        <div class="extra content">
+          <a>
+            <i class="user icon"></i>
+            22 Friends
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="ui six column grid">
-      <div class="row">
-        <div class="column"></div>
-        <div class="two wide column"></div>
-        <div class="two wide column"><h3>Address : </h3> </div>
-        <div class="five wide column">Sir Matt Busby Way, Old Trafford, GB- MANCHESTER M16 0RA</div>
-      </div>
-    </div>
-
-    <div class="ui six column grid">
-      <div class="row">
-        <div class="column"></div>
-        <div class="two wide column"></div>
-        <div class="two wide column"><h3>Website : </h3> </div>
-        <div class="five wide column">http://www.manutd.com</div>
-      </div>
-    </div>
-
-    <div class="ui six column grid">
-      <div class="row">
-        <div class="column"></div>
-        <div class="two wide column"></div>
-        <div class="two wide column"><h3>Manager : </h3> </div>
-        <div class="five wide column">Jose Mourinho</div>
-      </div>
-    </div>
+  </div>
