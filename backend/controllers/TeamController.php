@@ -137,6 +137,11 @@ public function behaviors()
 
         return $this->redirect($baseUrl."/team/player");
     }
+    public function actionAddplayer()
+    {
+      $this->layout = "@backend/themes/new/index";
+      return $this->render('addplayer');
+    }
 
 
 
