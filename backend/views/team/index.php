@@ -27,7 +27,7 @@ $baseUrl = \Yii::getAlias('@web');
 
 <!-- img logo team manager -->
 <img  id="img-logo" src="<?=$baseUrl.$user['img']?>" alt="" width="350px">
-<button  id="btn1" class="ui inverted blue button huge"><a href="<?=$baseUrl."/trade/index"?>">Trade</a></button>
-<button  id="btn2" class="ui inverted blue button huge"><a href="<?=$baseUrl."/team/player"?>">Edit Player</a></button>
-<button  id="btn3" class="ui inverted blue button huge"><a href="<?=$baseUrl."/team/editteam"?>">Edit Team</a></button>
-<button  id="btn4" class="ui inverted blue button huge"><a href="<?=$baseUrl."/trade/message"?>">Message</a></button>
+<a href="<?=$baseUrl."/trade/index"?>"><button  id="btn1" class="ui inverted blue button huge">Trade</button></a>
+<a href="<?=$baseUrl."/team/player"?>"><button  id="btn2" class="ui inverted blue button huge">Edit Player</button></a>
+<a href="<?=$baseUrl."/team/editteam"?>"><button  id="btn3" class="ui inverted blue button huge">Edit Team</button></a>
+<a href="<?=$baseUrl."/trade/message"?>"><button  id="btn4" class="ui inverted blue button huge">Message</button></a>
