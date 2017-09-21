@@ -14,7 +14,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
     <div class="column"></div>
 
     <div class="one wide column">
-      <img src="https://cdn1.iconfinder.com/data/icons/social-media-14/96/Evernote-128.png" alt="" width="100" height="70">
+      <img src="https://cdn3.iconfinder.com/data/icons/tango-icon-library/48/accessories-text-editor-128.png" alt="" width="100" height="70">
     </div>
 
     <div class="two wide column">
@@ -36,7 +36,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Name team</label>
-          <input type="text" placeholder="name team">
+          <input type="text" name="name" placeholder="name team">
         </div>
       </div>
     </div>
@@ -45,7 +45,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>City</label>
-          <input type="text" placeholder="City">
+          <input type="text" name="city" placeholder="City">
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Stadium</label>
-          <input type="text" placeholder="Stadium">
+          <input type="text" name="stadium" placeholder="Stadium">
         </div>
       </div>
     </div>
@@ -73,7 +73,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Establish</label>
-          <input type="text" placeholder="establish">
+          <input type="text" name="establish" placeholder="establish">
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Address</label>
-          <input type="text" placeholder="address">
+          <input type="text" name="address" placeholder="address">
         </div>
       </div>
     </div>
@@ -91,7 +91,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Website</label>
-          <input type="text" placeholder="website">
+          <input type="text" name ="website" placeholder="website">
         </div>
       </div>
     </div>
@@ -110,7 +110,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Manager</label>
-          <input type="text" placeholder="manager">
+          <input type="text" name ="manager" placeholder="manager">
         </div>
       </div>
     </div>
