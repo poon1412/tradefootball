@@ -33,14 +33,26 @@ $baseUrl = \Yii::getAlias('@web');
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<br>
-<a href="<?=$baseUrl."/home/site"?>"><img id="img-logo" src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
-<button id="b1" class="ui yellow button big"><i class="icon user"></i>Player</button>
-<button id="b2" class="ui yellow button big"><i class="icon Soccer"></i>Team</button>
+<div class="ui container">
+<div class="ui grid">
+  <div class="column">
+    <div class="ui one column grid">
+      <div class="one column">
+        <br><br>
+        <a href="<?=$baseUrl."/home/site"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
+        <div class="three column">
+          <br><br><br> &nbsp;&nbsp;&nbsp;
+          <button  class="ui yellow button big"><i class="icon user"></i>Player</button>
+          <button  class="ui yellow button big"><i class="icon Soccer"></i>Team</button>
 
+          <button  class="ui yellow button big" style="float: right;"><i class="icon lock in"></i>Login</button>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
 <br>
-<br>
-</br>
+
 <div class="ui container">
   <div class="ui grid">
   <div class="four wide column"></div>
@@ -49,7 +61,7 @@ $baseUrl = \Yii::getAlias('@web');
   <form  action="" method="get">
   <div class="ui category search">
   <div class="ui icon input">
-    <input class="prompt" type="text" name="search" placeholder="Search...">
+    <input style="float: right;" class="prompt" type="text" name="search" placeholder="Search..." >
     <i class="search icon"></i>
   </div>
   <div class="results"></div>

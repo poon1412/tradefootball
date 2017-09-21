@@ -1,5 +1,8 @@
+#r{
+left: 111px;
+}
 #img-logo{
-  position: relative;
+  position: absolute;
   z-index: 15;
   top: 20%;
   left: 10%;
