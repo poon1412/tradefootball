@@ -7,6 +7,24 @@ $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 $baseUrl = \Yii::getAlias('@web/assets');
 ?>
+<!-- top main -->
+<div class="ui grid">
+  <div class="four wide column">  <button class="ui labeled icon button"><i class="left chevron icon"></i>Back</button></div>
+  <div class="four wide column"></div>
+  <div class="four wide column"></div>
+  <div class="four wide column">
+  <div style="float: right;" class="ui horizontal list">
+    <div class="item">
+      <img class="ui mini circular image" src="/images/avatar2/small/molly.png">
+        <div class="content">
+          <div class="ui sub header">Molly</div>
+          Coordinator
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end top main -->
 
 </br></br>
 <div class="ui six column grid">
@@ -36,7 +54,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Firstname</label>
-          <input type="text" name="name" placeholder="name">
+          <input type="text" placeholder="name">
         </div>
       </div>
     </div>
@@ -45,7 +63,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Lastname</label>
-          <input type="text" name="lname" placeholder="last name">
+          <input type="text" placeholder="last name">
         </div>
       </div>
     </div>
@@ -54,7 +72,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Age</label>
-          <input type="number" name="age" placeholder="age">
+          <input type="text" placeholder="age">
         </div>
       </div>
     </div>
@@ -73,7 +91,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Weight</label>
-          <input type="number" name="weight" placeholder="weight">
+          <input type="text" placeholder="weight">
         </div>
       </div>
     </div>
@@ -82,7 +100,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Height</label>
-          <input type="number" name="height" placeholder="height">
+          <input type="text" placeholder="height">
         </div>
       </div>
     </div>
@@ -91,7 +109,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Day-Month-Year</label>
-          <input type="text" name="D_M_Y" placeholder="D-M-Y">
+          <input type="text" placeholder="D-M-Y">
         </div>
       </div>
     </div>
@@ -110,7 +128,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Position</label>
-          <input type="text" name="position" placeholder="position">
+          <input type="text" placeholder="position">
         </div>
       </div>
     </div>
@@ -119,7 +137,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Number</label>
-          <input type="number" name="number" placeholder="number">
+          <input type="text" placeholder="number">
         </div>
       </div>
     </div>
@@ -128,7 +146,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Country</label>
-          <input type="text" name="country" placeholder="country">
+          <input type="text" placeholder="country">
         </div>
       </div>
     </div>

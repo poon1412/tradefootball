@@ -8,8 +8,48 @@ $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii
 $baseUrl = \Yii::getAlias('@web/assets');
 ?>
 
+
+<!-- top main -->
+<div class="ui grid">
+  <div class="four wide column">  <button class="ui labeled icon button small"><i class="left chevron icon"></i>Back</button></div>
+  <div class="four wide column"></div>
+  <div class="four wide column"></div>
+  <div class="four wide column">
+  <div style="float: right;" class="ui horizontal list">
+    <div class="item">
+      <img class="ui mini circular image" src="/images/avatar2/small/molly.png">
+        <div class="content">
+          <div class="ui sub header">Molly</div>
+          Coordinator
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end top main -->
+
+<!-- main nav -->
+<div class="ui container">
+<div class="ui grid">
+  <div class="column">
+    <div class="ui one column grid">
+      <div class="one column">
+        <a href="<?=$baseUrl."/home/site"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
+        <div class="three column">
+          <br><br><br> &nbsp;&nbsp;&nbsp;
+          <button  class="ui blue button small"><i class="icon user"></i>Player</button>
+          <button  class="ui blue button small"><i class="icon Soccer"></i>Team</button>
+          <button  class="ui blue button small"><i class="icon Exchange"></i>Trade</button>
+          <button  class="ui blue button small"><i class="icon mail"></i>Message</button>
+          <button  class="ui blue button small" style="float: right;"><i class="icon lock in"></i>Logout</button>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
 <br>
-<br>
+<!-- end main nav -->
+
 <div class="ui container">
   <div class="ui grid">
   <div class="one wide column"></div>
@@ -45,7 +85,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
   <div class="one fields">
     <div class="field">
       <label><h2>$Price</h2></label>
-      <input placeholder="price" type="number" name="price">
+      <input placeholder="price" type="text" name="price">
     </div>
   </div>
   <button class="ui youtube button" name="submit">

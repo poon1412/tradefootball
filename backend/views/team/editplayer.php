@@ -8,7 +8,26 @@ $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii
 $baseUrl = \Yii::getAlias('@web');
 ?>
 
-</br></br>
+<!-- top main -->
+<div class="ui grid">
+  <div class="four wide column">  <button class="ui labeled icon button"><i class="left chevron icon"></i>Back</button></div>
+  <div class="four wide column"></div>
+  <div class="four wide column"></div>
+  <div class="four wide column">
+  <div style="float: right;" class="ui horizontal list">
+    <div class="item">
+      <img class="ui mini circular image" src="/images/avatar2/small/molly.png">
+        <div class="content">
+          <div class="ui sub header">Molly</div>
+          Coordinator
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end top main -->
+
+
 <div class="ui six column grid">
   <div class="row">
     <div class="column"></div>
@@ -173,7 +192,7 @@ $baseUrl = \Yii::getAlias('@web');
     </div>
 
     <div class="one wide column">
-
+      <div class="five wide column">
         <div class="ui form ">
           <div class="inline field">
             <label>Country</label>
@@ -181,7 +200,7 @@ $baseUrl = \Yii::getAlias('@web');
           </div>
         </div>
       </div>
-    
+    </div>
   </div>
 </div>
 

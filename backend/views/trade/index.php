@@ -34,29 +34,48 @@ $baseUrl = \Yii::getAlias('@web');
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
-<a href="<?=$baseUrl."/home/site"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" style="float: right;" width=50 height=50 ALIGN="LEFT" alt=""></a>
+<!-- top main -->
+<div class="ui grid">
+  <div class="four wide column">  <button class="ui labeled icon button"><i class="left chevron icon"></i>Back</button></div>
+  <div class="four wide column"></div>
+  <div class="four wide column"></div>
+  <div class="four wide column">
+  <div style="float: right;" class="ui horizontal list">
+    <div class="item">
+      <img class="ui mini circular image" src="/images/avatar2/small/molly.png">
+        <div class="content">
+          <div class="ui sub header">Molly</div>
+          Coordinator
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end top main -->
 
+<!-- main nav -->
 <div class="ui container">
 <div class="ui grid">
   <div class="column">
     <div class="ui one column grid">
       <div class="one column">
-        <br><br>
         <a href="<?=$baseUrl."/home/site"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
         <div class="three column">
           <br><br><br> &nbsp;&nbsp;&nbsp;
           <button  class="ui blue button big"><i class="icon user"></i>Player</button>
           <button  class="ui blue button big"><i class="icon Soccer"></i>Team</button>
-
-          <button  class="ui blue button big" style="float: right;"><i class="icon lock in"></i>Login</button>
+          <button  class="ui blue button big"><i class="icon Exchange"></i>Trade</button>
+          <button  class="ui blue button big"><i class="icon mail"></i>Message</button>
+          <button  class="ui blue button big" style="float: right;"><i class="icon lock in"></i>Logout</button>
         </div>
     </div>
   </div>
 </div>
 </div>
-
 <br>
-</br>
+<!-- end main nav -->
+
+
 <div class="ui container">
   <div class="ui grid">
   <div class="four wide column"></div>
@@ -117,8 +136,13 @@ $baseUrl = \Yii::getAlias('@web');
     <?php endforeach; ?>
   </tbody>
 </table>
+<div class="ui grid">
+  <div class="nine wide column"></div>
+  <div class="seven wide column " style="float: right;">
+    <?= LinkPager::widget(['pagination' => $pagination]) ?>
+  </div>
+</div>
 
-		<?= LinkPager::widget(['pagination' => $pagination]) ?>
 
 
 </div>
