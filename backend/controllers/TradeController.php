@@ -44,7 +44,7 @@ class TradeController extends Controller
         ]);
 
       }
-      public function actionTranfer()
+      public function actionTransfer()
       {
         $this->layout = "@backend/themes/new/index";
         return $this->render('transfer');
