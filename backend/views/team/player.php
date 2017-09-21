@@ -1,7 +1,8 @@
 <?php
 use yii\widgets\LinkPager;
 /* @var $this yii\web\View */
-
+$session = Yii::$app->session;
+$user = $session->get('user');
 $this->title = 'index';
 
 $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
@@ -40,10 +41,10 @@ $baseUrl = \Yii::getAlias('@web');
   <div class="four wide column">
   <div style="float: right;" class="ui horizontal list">
     <div class="item">
-      <img class="ui mini circular image" src="/images/avatar2/small/molly.png">
+      <img class="ui mini circular image" src="<?=$baseUrl.$user['img']?>">
         <div class="content">
-          <div class="ui sub header">Molly</div>
-          Coordinator
+          <div class="ui sub header">TEAM</div>
+          <?= $user['name'] ?>
         </div>
       </div>
     </div>
