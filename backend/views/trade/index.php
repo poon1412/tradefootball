@@ -88,7 +88,7 @@ $baseUrl = \Yii::getAlias('@web');
           <td>
             <form class="" action="<?=$baseUrl."/team/editplayer"?>" method="get">
             <input type="hidden" name="id" value="<?=$var['_id']?>">
-            <button class="ui orange button "><i class="edit icon"></i> EDIT</a></button>
+            <button class="ui orange button "><i class="Handshake icon"></i> TRADE</a></button>
             </form>
           </td>
         </tr>
