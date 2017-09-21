@@ -47,6 +47,12 @@ public function behaviors()
 
     public function actionEditplayer()
     {
+      $session = Yii::$app->session;
+      $baseUrl = \Yii::getAlias('@web');
+      if(!($session->has('user')))
+      {
+        return $this->redirect($baseUrl.'/auth/login');
+      }
       $request = Yii::$app->request;
       $id = $request->get('id',null);
       $p=(int)$id;
@@ -97,6 +103,11 @@ public function behaviors()
 
     public function actionSaveplayer(){
       $session = Yii::$app->session;
+      $baseUrl = \Yii::getAlias('@web');
+      if(!($session->has('user')))
+      {
+        return $this->redirect($baseUrl.'/auth/login');
+      }
       $user = $session->get('user');
       $teamid = (int)$user['_id'];
 
@@ -111,7 +122,6 @@ public function behaviors()
       $position = $request->get('position',null);
       $number = $request->get('number',null);
       $country = $request->get('country',null);
-      $baseUrl = \Yii::getAlias('@web');
 
       if($id == null){
         //create
@@ -148,6 +158,11 @@ public function behaviors()
     public function actionDelete()
     {
         $baseUrl = \Yii::getAlias('@web');
+        $session = Yii::$app->session;
+        if(!($session->has('user')))
+        {
+          return $this->redirect($baseUrl.'/auth/login');
+        }
         $request = Yii::$app->request;
         $id = (int)$request->get('id',null);
         $model = Player::findOne($id)->delete();
@@ -156,6 +171,12 @@ public function behaviors()
     }
     public function actionAddplayer()
     {
+      $session = Yii::$app->session;
+      $baseUrl = \Yii::getAlias('@web');
+      if(!($session->has('user')))
+      {
+        return $this->redirect($baseUrl.'/auth/login');
+      }
       $this->layout = "@backend/themes/new/index";
       return $this->render('addplayer');
     }
