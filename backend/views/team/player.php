@@ -32,6 +32,8 @@ $baseUrl = \Yii::getAlias('@web');
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+<a href="<?=$baseUrl."/home/site"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" style="float: right;" width=50 height=50 ALIGN="LEFT" alt=""></a>
+
 <div class="ui container">
 <div class="ui grid">
   <div class="column">
