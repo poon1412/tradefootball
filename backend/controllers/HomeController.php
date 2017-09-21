@@ -8,6 +8,7 @@ use yii\filters\AccessControl;
 use common\models\LoginForm;
 use backend\models\Player;
 use backend\models\Team;
+use backend\models\Transfer;
 
 class HomeController extends Controller
 {
@@ -39,8 +40,44 @@ public function behaviors()
     }
     public function actionSite()
     {
+      $query = Transfer::find();
+      $result = $query->all();
+
+//       foreach ($result as $obj){
+//       	$player = Player::findOne($obj->_idplayer);
+//       	$name = $player['name'];
+
+//       	//เขียนแบบนี้ส่งไปที่หน้าจอ หรือ
+
+//       	echo $name;
+//       	echo $obj->_idold;
+//       	echo $obj->_idnew;
+//       	exit();
+//       }
+
+      // ขอปิดอันนี้แปบ
+//       foreach ($result as $var) {
+//         $R[$player] = Player::findone($var['_idplayer']);
+//         $R[$old] = Team::findone($var['_idold']);
+//         $R[$new] = Team::findone($var['_idnew']);
+//       }
+      $pagination = new Pagination([
+            'defaultPageSize' => 4,
+            'totalCount' => $query->count(),
+        ]);
+
+        $result = $query->orderBy('_id')
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+
       $this->layout = "@backend/themes/new/site";
-      return $this->render('site');
+      return $this->render('site', [
+        'result' => $result,
+        'pagination' => $pagination,
+      ]);
+
     }
     public function actionPlayer()
     {

@@ -32,4 +32,9 @@ class Player extends \yii\mongodb\ActiveRecord
            [['_id', 'name', 'lname','age', 'weight', 'height','D_M_Y', 'team','position','number','country','_idteam','img'], 'safe']
        ];
    }
+
+   public function getPlayer($id){
+   		$model = Player::findOne($id);
+   		return $model;
+   }
 }

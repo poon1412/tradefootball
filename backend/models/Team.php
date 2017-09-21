@@ -55,4 +55,8 @@ class Team extends \yii\mongodb\ActiveRecord
            'img' => 'Img',
        ];
    }
+   public function getTeam($id){
+       $model = Team::findOne($id);
+       return $model;
+   }
 }
