@@ -19,6 +19,12 @@ class TradeController extends Controller
 
       public function actionIndex()
       {
+        $session = Yii::$app->session;
+        $baseUrl = \Yii::getAlias('@web');
+        if(!($session->has('user')))
+        {
+          return $this->redirect($baseUrl.'/auth/login');
+        }
         $request = Yii::$app->request;
         $search = $request->get('search',null);
 
@@ -46,11 +52,23 @@ class TradeController extends Controller
       }
       public function actionTransfer()
       {
+        $session = Yii::$app->session;
+        $baseUrl = \Yii::getAlias('@web');
+        if(!($session->has('user')))
+        {
+          return $this->redirect($baseUrl.'/auth/login');
+        }
         $this->layout = "@backend/themes/new/index";
         return $this->render('transfer');
       }
       public function actionMessage()
       {
+        $session = Yii::$app->session;
+        $baseUrl = \Yii::getAlias('@web');
+        if(!($session->has('user')))
+        {
+          return $this->redirect($baseUrl.'/auth/login');
+        }
         $this->layout = "@backend/themes/new/index";
         return $this->render('message');
       }
