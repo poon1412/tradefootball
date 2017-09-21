@@ -1,8 +1,11 @@
 <?php
 
 /* @var $this yii\web\View */
+use backend\models\Team;
 $session = Yii::$app->session;
 $user = $session->get('user');
+$id =$user['_id'];
+$T=Team::getTeam($id);
 $this->title = 'index';
 $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
@@ -54,7 +57,7 @@ $baseUrl = \Yii::getAlias('@web');
     <div class="column"></div>
 
     <div class="one wide column">
-      <img src="https://cdn3.iconfinder.com/data/icons/tango-icon-library/48/accessories-text-editor-128.png" alt="" width="100" height="70">
+      <img src="<?=$baseUrl."/team"?>" alt="" width="100" height="70">
     </div>
 
     <div class="two wide column">
@@ -78,7 +81,7 @@ $baseUrl = \Yii::getAlias('@web');
         <div class="inline field">
           <label>Name team</label>
 
-          <input type="text" name="name" placeholder="name team" value="<?= $user['name'] ?>">
+          <input type="text" name="name" placeholder="name team" value="<?= $T['name'] ?>">
         </div>
       </div>
     </div>
@@ -87,7 +90,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>City</label>
-          <input type="text" name="city" placeholder="City" value="<?= $user['city'] ?>">
+          <input type="text" name="city" placeholder="City" value="<?= $T['city'] ?>">
         </div>
       </div>
     </div>
@@ -96,7 +99,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Stadium</label>
-          <input type="text" name="stadium" placeholder="Stadium" value="<?= $user['stadium'] ?>">
+          <input type="text" name="stadium" placeholder="Stadium" value="<?= $T['stadium'] ?>">
         </div>
       </div>
     </div>
@@ -115,7 +118,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Establish</label>
-          <input type="text" name="establish" placeholder="establish" value="<?= $user['establish'] ?>">
+          <input type="text" name="establish" placeholder="establish" value="<?= $T['establish'] ?>">
         </div>
       </div>
     </div>
@@ -124,7 +127,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Address</label>
-          <input type="text" name="address" placeholder="address" value="<?= $user['address'] ?>">
+          <input type="text" name="address" placeholder="address" value="<?= $T['address'] ?>">
         </div>
       </div>
     </div>
@@ -133,7 +136,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Website</label>
-          <input type="text" name ="website" placeholder="website" value="<?= $user['website'] ?>">
+          <input type="text" name ="website" placeholder="website" value="<?= $T['website'] ?>">
         </div>
       </div>
     </div>
@@ -152,7 +155,7 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Manager</label>
-          <input type="text" name ="manager" placeholder="manager" value="<?= $user['manager'] ?>">
+          <input type="text" name ="manager" placeholder="manager" value="<?= $T['manager'] ?>">
         </div>
       </div>
     </div>
