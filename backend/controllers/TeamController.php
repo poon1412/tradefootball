@@ -100,7 +100,10 @@ public function behaviors()
         //create
         $count = Player::find()->count();
         $model = new Player();
-        $model->_id = ($count+1);
+        while (Player::findone($count)) {
+          $count+=1;
+        }
+        $model->_id = ($count);
         $model->_idteam = $teamid;
         $model->team = $user['name'];
       }else{
@@ -134,7 +137,7 @@ public function behaviors()
 
         return $this->redirect($baseUrl."/team/player");
     }
-    
+
 
 
 }

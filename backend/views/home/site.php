@@ -3,59 +3,127 @@
 /* @var $this yii\web\View */
 
 $this->title = 'index';
-$this->registerCssFile ( "@web/assets/semantic/slider.css" );
-$this->registerCssFile ( "@web/assets/semantic/site.css" );
-$this->registerJsFile('@web/assets/semantic/slider.js',['depends' => [\yii\web\JqueryAsset::className()]]);
+$this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
-
-$baseUrl = \Yii::getAlias('@web');
+$baseUrl = \Yii::getAlias('@web/assets');
 ?>
 
-<div class="relative">
-  <br></br>
-  <!-- base URL -->
-       <img id="img-fix" class="sm" src="<?=$baseUrl."/assets/logo/logo.png"?>" alt="">
-	<br></br>
-	<br></br>
-    <div class="" id="logout" >
-      			<button id="img-btn3" class="ui yellow button inverted">Login</button>
-    </div><br><br><br>
-    <button id="img-btn1" class="ui yellow button"><i class="icon user"></i>Player</button>
-    <button id="img-btn2" class="ui yellow button"><i class="icon Soccer"></i>Team</button>
+</br></br>
+<div class="ui six column grid">
+  <div class="row">
+    <div class="column"></div>
+
+    <div class="one wide column">
+      <img src="https://cdn1.iconfinder.com/data/icons/social-media-14/96/Evernote-128.png" alt="" width="100" height="70">
+    </div>
+
+    <div class="two wide column">
+    </br>
+      <h1 class="ui header">Transfer</h1>
+    </div>
+
+  </div>
+  <div class="one wide column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
 </div>
 
 
 
-<div class="slider">
+<div class="ui six column grid">
+  <div class="row">
+    <div class="column"></div>
 
-  <div class="slider-wrapper flex">
-
-    <!-- query -->
-    <?php foreach ($result as $var): ?>
-    <div class="slide flex">
-      <div class="slide-image slider-link prev"><img src="<?=$baseUrl.$var['img']?>" width="100px" height="400px">
-        <div class="overlay"></div>
-      </div>
-      <div class="slide-content black">
-        <div class="slide-title"><?= $var['name'] ?></div>
-        <div class="slide-text">City :<?= $var['city']?><br> Stadium : <?= $var['stadium']?><br> Establish : <?= $var['establish']?><br> Address : <?= $var['address']?></div>
-        <div class="slide-text">Manager :<?= $var['manager']?></div>
-        <div class="slide-more"><a href="<?= $var['website']?>">VISIT SITE</a></div>
+    <div class="column">
+      <div class="ui card">
+        <div class="image">
+          <img src="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx" alt="" width="100" height="70">
+        </div>
+        <div class="content">
+          <a class="header">Kristy</a>
+          <div class="meta">
+            <span class="date">Joined in 2013</span>
+          </div>
+          <div class="description">
+            Kristy is an art director living in New York.
+          </div>
+        </div>
+        <div class="extra content">
+          <a>
+            <i class="user icon"></i>
+              22 Friends
+          </a>
+        </div>
       </div>
     </div>
-    <?php endforeach; ?>
-    <!-- end query -->
+
+    <div class="column">
+      <div class="ui card">
+        <div class="image">
+          <img src="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx" alt="" width="100" height="70">
+        </div>
+        <div class="content">
+          <a class="header">Kristy</a>
+          <div class="meta">
+            <span class="date">Joined in 2013</span>
+          </div>
+          <div class="description">
+            Kristy is an art director living in New York.
+          </div>
+        </div>
+        <div class="extra content">
+          <a>
+            <i class="user icon"></i>
+            22 Friends
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="ui card">
+        <div class="image">
+          <img src="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx" alt="" width="100" height="70">
+        </div>
+        <div class="content">
+          <a class="header">Kristy</a>
+          <div class="meta">
+            <span class="date">Joined in 2013</span>
+          </div>
+          <div class="description">
+            Kristy is an art director living in New York.
+          </div>
+        </div>
+        <div class="extra content">
+          <a>
+            <i class="user icon"></i>
+            22 Friends
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="ui card">
+        <div class="image">
+          <img src="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx" alt="" width="100" height="50">
+        </div>
+        <div class="content">
+          <a class="header">Kristy</a>
+          <div class="meta">
+            <span class="date">Joined in 2013</span>
+          </div>
+          <div class="description">
+            Kristy is an art director living in New York.
+          </div>
+        </div>
+        <div class="extra content">
+          <a>
+            <i class="user icon"></i>
+            22 Friends
+          </a>
+        </div>
+      </div>
+    </div>
 
   </div>
-  <!-- end slider-wrapper  -->
-  <!-- arrows -->
-  <div class="arrows">
-    <a href="#" title="Previous" class="arrow slider-link prev"></a>
-    <a href="#" title="Next" class="arrow slider-link next"></a>
-  </div>
-  <!-- end arrows -->
-</div>
-<!-- end slider -->
-
-<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>

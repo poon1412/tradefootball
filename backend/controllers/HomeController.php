@@ -27,19 +27,20 @@ public function behaviors()
       $this->layout = "@backend/themes/new/index";
       return $this->render('index');
     }
-    public function actionSite()
+    public function actionTeam()
     {
       $query = Team::find();
       $result = $query->all();
       $this->layout = "@backend/themes/new/site";
-        return $this->render('site', [
+        return $this->render('team', [
           'result' => $result,
         ]);
+
     }
-    public function actionTeam()
+    public function actionSite()
     {
       $this->layout = "@backend/themes/new/site";
-      return $this->render('team');
+      return $this->render('site');
     }
     public function actionPlayer()
     {
