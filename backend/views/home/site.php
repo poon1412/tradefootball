@@ -65,19 +65,21 @@ foreach ($result as $var): ?>
           <img src="<?= $baseUrl.Player::getPlayer($var->_idplayer)['img'] ?>" alt="" width="100" height="70">
         </div>
         <div class="content">
-          <a class="header">Kristy</a>
+          <a class="header"><?= Player::getPlayer($var->_idplayer)['name'].' '.Player::getPlayer($var->_idplayer)['lname'] ?></a>
           <div class="meta">
-            <span class="date">Joined in 2013</span>
+            <span class="date"><?= Player::getPlayer($var->_idplayer)['position'] ?></span>
           </div>
           <div class="description">
-            Kristy is an art director living in New York.
+          <img class="ui mini circular image" src="<?= $baseUrl.Team::getTeam($var->_idold)['img'] ?>">
+          <i class="Exchange icon"></i>
+          <img class="ui mini circular image" src="<?= $baseUrl.Team::getTeam($var->_idnew)['img'] ?>"> 
           </div>
         </div>
         <div class="extra content">
-          <a>
-            <i class="user icon"></i>
-              22 Friends
-          </a>
+
+            <i class="Dollar icon"></i>
+              <?= $var->price?>
+
         </div>
       </div>
     </div>
