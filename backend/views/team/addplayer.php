@@ -36,7 +36,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Firstname</label>
-          <input type="text" placeholder="name">
+          <input type="text" name="name" placeholder="name">
         </div>
       </div>
     </div>
@@ -45,7 +45,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Lastname</label>
-          <input type="text" placeholder="last name">
+          <input type="text" name="lname" placeholder="last name">
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
       <div class="ui form">
         <div class="inline field">
           <label>Age</label>
-          <input type="text" placeholder="age">
+          <input type="number" placeholder="age">
         </div>
       </div>
     </div>

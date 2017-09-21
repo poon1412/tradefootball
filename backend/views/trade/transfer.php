@@ -45,7 +45,7 @@ $baseUrl = \Yii::getAlias('@web/assets');
   <div class="one fields">
     <div class="field">
       <label><h2>$Price</h2></label>
-      <input placeholder="price" type="text" name="price">
+      <input placeholder="price" type="number" name="price">
     </div>
   </div>
   <button class="ui youtube button" name="submit">
