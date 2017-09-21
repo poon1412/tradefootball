@@ -38,7 +38,7 @@ $baseUrl = \Yii::getAlias('@web');
         <a href="<?=$baseUrl."/team"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
         <div class="three column">
           <br><br><br> &nbsp;&nbsp;&nbsp;
-          <a href="<?=$baseUrl."/team/player"?>"><button  class="ui blue button small"><i class="icon user"></i>Player</button></a>
+          <button  class="ui blue button small"><i class="icon user"></i>Player</button>
           <button  class="ui blue button small"><i class="icon Soccer"></i>Team</button>
           <button  class="ui blue button small"><i class="icon Exchange"></i>Trade</button>
           <button  class="ui blue button small"><i class="icon mail"></i>Message</button>
@@ -57,7 +57,7 @@ $baseUrl = \Yii::getAlias('@web');
     <div class="column"></div>
 
     <div class="one wide column">
-      <img src="<?=$baseUrl."/team"?>" alt="" width="100" height="70">
+      <img src="<?=$baseUrl.$T['img']?>" alt="" width="100" height="70">
     </div>
 
     <div class="two wide column">
