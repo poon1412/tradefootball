@@ -79,9 +79,19 @@ class TradeController extends Controller
         }
         $query = Log::find();
         $result = $query->all();
+        $pagination = new Pagination([
+                    'defaultPageSize' => 4,
+                    'totalCount' => $query->count(),
+                ]);
+
+                $result = $query->orderBy('_id')
+                    ->offset($pagination->offset)
+                    ->limit($pagination->limit)
+                    ->all();
         $this->layout = "@backend/themes/new/site";
           return $this->render('message', [
             'result' => $result,
+            'pagination' => $pagination,
           ]);
       }
       public function actionBuy()
@@ -166,10 +176,19 @@ class TradeController extends Controller
         }
         $query = Log::find();
         $result = $query->all();
-        
+        $pagination = new Pagination([
+                    'defaultPageSize' => 4,
+                    'totalCount' => $query->count(),
+                ]);
+
+                $result = $query->orderBy('_id')
+                    ->offset($pagination->offset)
+                    ->limit($pagination->limit)
+                    ->all();
         $this->layout = "@backend/themes/new/site";
           return $this->render('check', [
             'result' => $result,
+            'pagination' => $pagination,
           ]);
       }
 }

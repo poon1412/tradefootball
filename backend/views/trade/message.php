@@ -1,6 +1,7 @@
 <?php
 use backend\models\Player;
 use backend\models\Team;
+use yii\widgets\LinkPager;
 /* @var $this yii\web\View */
 $session = Yii::$app->session;
 $user = $session->get('user');
@@ -9,7 +10,13 @@ $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 $baseUrl = \Yii::getAlias('@web');
 ?>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <div class="ui container">
   <div class="ui grid">
     <div class="four wide column"></div>
@@ -110,4 +117,10 @@ $baseUrl = \Yii::getAlias('@web');
 <?php endforeach; ?>
 
     </div>
+  </div>
+  <div class="ui six column grid">
+    <div class="row">
+      <div class="column"></div>
+  <div class="column"><?= LinkPager::widget(['pagination' => $pagination]) ?></div>
+  </div>
   </div>
