@@ -44,7 +44,7 @@ $baseUrl = \Yii::getAlias('@web');
 
   <div class="ui category search">
   <div class="ui icon input">
-    <form class="" action="" method="post">
+    <form class="" action="" method="get">
     <input class="prompt" type="text" name="search" placeholder="Search...">
     <i class="search icon"></i>
     </form>
@@ -75,7 +75,7 @@ $baseUrl = \Yii::getAlias('@web');
           </form>
         </td>
         <td>
-          <form class="" action="<?=$baseUrl."/team/editplayer"?>" method="get">
+          <form class="" action="<?=$baseUrl."/team/delete"?>" method="get">
           <input type="hidden" name="id" value="<?=$var['_id']?>">
           <button class="ui red button "><i class="remove user icon"></i> DELETE</button>
           </form>

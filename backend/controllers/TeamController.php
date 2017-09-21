@@ -8,6 +8,7 @@ use yii\filters\AccessControl;
 use common\models\LoginForm;
 use yii\web\NotFoundHttpException;
 use backend\models\Player;
+use backend\models\Team;
 class TeamController extends Controller
 {
 public function behaviors()
@@ -46,7 +47,9 @@ public function behaviors()
     }
     public function actionPlayer()
     {
-      $id=6;
+      $session = Yii::$app->session;
+      $user = $session->get('user');
+      $id = (int)$user['_id'];
       $request = Yii::$app->request;
       $search = $request->get('search',null);
 
@@ -75,6 +78,62 @@ public function behaviors()
         ]);
     }
 
+    public function actionSaveplayer(){
+      $session = Yii::$app->session;
+      $user = $session->get('user');
+      $teamid = (int)$user['_id'];
+
+      $request = Yii::$app->request;
+      $id = (int)$request->get('id',null);
+      $name = $request->get('name',null);
+      $lname = $request->get('lname',null);
+      $age = $request->get('age',null);
+      $weight = $request->get('weight',null);
+      $height = $request->get('height',null);
+      $D_M_Y = $request->get('D_M_Y',null);
+      $position = $request->get('position',null);
+      $number = $request->get('number',null);
+      $country = $request->get('country',null);
+      $baseUrl = \Yii::getAlias('@web');
+
+      if($id == null){
+        //create
+        $count = Player::find()->count();
+        $model = new Player();
+        $model->_id = ($count+1);
+        $model->_idteam = $teamid;
+        $model->team = $user['name'];
+      }else{
+        //update
+        $model = Player::findOne($id);
+      }
+
+      $model->name = $name;
+      $model->lname = $lname;
+      $model->age = $age;
+      $model->weight = $weight;
+      $model->height = $height;
+      $model->D_M_Y = $D_M_Y;
+      $model->position = $position;
+      $model->number = $number;
+      $model->country = $country;
+      if($model->save()){
+        echo "success";
+      }else{
+        echo "unsuccess";
+      }
+      return $this->redirect($baseUrl."/team/player");
+    }
+
+    public function actionDelete()
+    {
+        $baseUrl = \Yii::getAlias('@web');
+        $request = Yii::$app->request;
+        $id = (int)$request->get('id',null);
+        $model = Player::findOne($id)->delete();
+
+        return $this->redirect($baseUrl."/team/player");
+    }
 
 
 }
