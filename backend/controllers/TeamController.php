@@ -128,7 +128,7 @@ public function behaviors()
         $count = Player::find()->count();
         $model = new Player();
         while (Player::findone($count)) {
-          $count+=1;
+          $count++;
         }
         $model->_id = ($count);
         $model->_idteam = $teamid;

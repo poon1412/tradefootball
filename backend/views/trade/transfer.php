@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-
+use backend\models\Team;
 $this->title = 'index';
 $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
@@ -61,22 +61,25 @@ $baseUrl = \Yii::getAlias('@web');
   <div class="four wide column">
     <div class="ui card">
   <div class="image">
-    <img src="https://i0.wp.com/footballburp.com/wp-content/uploads/2016/09/jose-mourinho-not-looking-happy.jpg?fit=640%2C427">
+
+    <img src="<?= $baseUrl.$result->img ?>">
   </div>
   <div class="content">
-    <a class="header">Mourinho</a>
+    <a class="header"><?= $result->name.' '.$result->lname ?></a>
     <div class="meta">
-      <span class="position">Manager</span>
+      <span class="position"><?= $result->position ?></span>
     </div>
     <div class="description">
-      Kristy is an art director living in New York.
+      <img class="ui mini circular image" src="<?= $baseUrl.Team::getTeam($result->_idteam)['img'] ?>">
     </div>
   </div>
   <div class="extra content">
   </div>
 </div>
   </div>
-
+<form class="" action="<?=$baseUrl."/trade/buy"?>" method="get">
+  <input type="hidden" name="id" value="<?=$result->_id?>">
+  <input type="hidden" name="idteam" value="<?=$result->_idteam?>">
   <div class="seven wide column">
     <br>
     <br>
@@ -84,7 +87,7 @@ $baseUrl = \Yii::getAlias('@web');
   <div class="one fields">
     <div class="field">
       <label><h2>$Price</h2></label>
-      <input placeholder="price" type="text" name="price">
+      <input placeholder="price" type="number" name="price">
     </div>
   </div>
   <button class="ui youtube button" name="submit">
@@ -99,4 +102,5 @@ $baseUrl = \Yii::getAlias('@web');
   </div>
 
 </div>
+</form>
 </div>

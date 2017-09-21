@@ -2,11 +2,11 @@
 namespace backend\models;
 use Yii;
 
-class Transfer extends \yii\mongodb\ActiveRecord
+class Log extends \yii\mongodb\ActiveRecord
 {
   public static function collectionName()
    {
-       return ['footballDB', 'transfer'];
+       return ['footballDB', 'log'];
    }
    public function attributes()
     {
@@ -16,12 +16,13 @@ class Transfer extends \yii\mongodb\ActiveRecord
             '_idsend',
             '_idget',
             'price',
+            'status',
         ];
     }
     public function rules()
    {
        return [
-           [['_id', '_idplayer', '_idsend','_idget', 'price'], 'safe']
+           [['_id', '_idplayer', '_idsend','_idget', 'price','status'], 'safe']
        ];
    }
 }

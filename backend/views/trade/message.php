@@ -1,7 +1,9 @@
 <?php
-
+use backend\models\Player;
+use backend\models\Team;
 /* @var $this yii\web\View */
-
+$session = Yii::$app->session;
+$user = $session->get('user');
 $this->title = 'index';
 $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
@@ -74,101 +76,38 @@ $baseUrl = \Yii::getAlias('@web');
 <div class="ui six column grid">
   <div class="row">
     <div class="column"></div>
+<?php foreach ($result as $var):
+  $p=Player::getPlayer($var['_idplayer']);
+  $t=Team::getTeam($var['_idsend']);
+   ?>
+<?php if ($var['_idget']==$user['_id'] && $var['status']=='Waiting'): ?>
 
-    <div class="column">
+    <div class="three wide column">
       <div class="ui card">
         <div class="image">
-          <img src="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx" alt="" width="100" height="70">
+          <img src="<?=$baseUrl.$p['img'];?>" alt="" width="100" height="70">
         </div>
         <div class="content">
-          <a class="header">Kristy</a>
+          <a class="header"><?= $p['name']." ".$p['lname'];?></a>
           <div class="meta">
-            <span class="date">Joined in 2013</span>
+            <span class="date"><?= $p['position'];?></span>
           </div>
           <div class="description">
-            Kristy is an art director living in New York.
+            From : <img class="ui mini circular image" src="<?= $baseUrl.$t['img'] ?>"><br>
+            Price : <?= $var['price'];?>
           </div>
         </div>
         <div class="extra content">
-          <a>
+
             <i class="user icon"></i>
-            <button class="ui grey button">Accept</button>
-            <button class="ui grey button">Refuse</button>
-          </a>
+            <a href="<?=$baseUrl."/trade/accept?id=".$var['_id']?>"><button class="ui grey button">Accept</button></a>
+            <a href="<?=$baseUrl."/trade/refuse?id=".$var['_id']?>"><button class="ui grey button">Refuse</button></a>
+
         </div>
       </div>
     </div>
+  <?php endif; ?>
+<?php endforeach; ?>
 
-    <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img src="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx" alt="" width="100" height="70">
-        </div>
-        <div class="content">
-          <a class="header">Kristy</a>
-          <div class="meta">
-            <span class="date">Joined in 2013</span>
-          </div>
-          <div class="description">
-            Kristy is an art director living in New York.
-          </div>
-        </div>
-        <div class="extra content">
-          <a>
-            <i class="user icon"></i>
-            <button class="ui grey button">Accept</button>
-            <button class="ui grey button">Refuse</button>
-          </a>
-        </div>
-      </div>
     </div>
-
-    <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img src="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx" alt="" width="100" height="70">
-        </div>
-        <div class="content">
-          <a class="header">Kristy</a>
-          <div class="meta">
-            <span class="date">Joined in 2013</span>
-          </div>
-          <div class="description">
-            Kristy is an art director living in New York.
-          </div>
-        </div>
-        <div class="extra content">
-          <a>
-            <i class="user icon"></i>
-            <button class="ui grey button">Accept</button>
-            <button class="ui grey button">Refuse</button>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img src="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx" alt="" width="100" height="50">
-        </div>
-        <div class="content">
-          <a class="header">Kristy</a>
-          <div class="meta">
-            <span class="date">Joined in 2013</span>
-          </div>
-          <div class="description">
-            Kristy is an art director living in New York.
-          </div>
-        </div>
-        <div class="extra content">
-          <a>
-            <i class="user icon"></i>
-            <button class="ui grey button">Accept</button>
-            <button class="ui grey button">Refuse</button>
-          </a>
-        </div>
-      </div>
-    </div>
-
   </div>
