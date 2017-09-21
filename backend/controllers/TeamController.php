@@ -134,6 +134,7 @@ public function behaviors()
 
         return $this->redirect($baseUrl."/team/player");
     }
+    
 
 
 }
