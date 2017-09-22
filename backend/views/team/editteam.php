@@ -11,25 +11,15 @@ $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 $baseUrl = \Yii::getAlias('@web');
 ?>
-<div class="ui container">
-  <div class="ui grid">
-    <div class="four wide column"></div>
-    <div class="four wide column"></div>
-    <div class="four wide column"></div>
-    <div class="four wide column ">
-      <div class="ui horizontal list " style="float: right;">
-        <div class="item" >
-          <img class="ui mini circular image" src="/images/avatar2/small/molly.png">
-            <div class="content">
-              <div class="ui sub header">Molly</div>
-                Coordinator
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-<!-- main nav -->
+
+<style type="text/css">
+ .topcorner{
+   position:absolute;
+   top:10;
+   right:0;
+  }
+</style>
+<!-- main nav --><br>
 <div class="ui container">
 <div class="ui grid">
   <div class="column">
@@ -38,11 +28,21 @@ $baseUrl = \Yii::getAlias('@web');
         <a href="<?=$baseUrl."/team"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
         <div class="three column">
           <br><br><br> &nbsp;&nbsp;&nbsp;
-          <button  class="ui blue button small"><i class="icon user"></i>Player</button>
-          <button  class="ui blue button small"><i class="icon Soccer"></i>Team</button>
-          <button  class="ui blue button small"><i class="icon Exchange"></i>Trade</button>
-          <button  class="ui blue button small"><i class="icon mail"></i>Message</button>
-          <button  class="ui blue button small" style="float: right;"><i class="icon lock in"></i>Logout</button>
+          <a href="<?=$baseUrl."/team/player"?>"><button  class="ui blue button small"><i class="icon user"></i>Player</button></a>
+        <!-- <a href="<?=$baseUrl."/team/editteam"?>"><button  class="ui blue button small"><i class="icon Soccer"></i>Team</button></a> -->
+        <a href="<?=$baseUrl."/trade"?>"><button  class="ui blue button small"><i class="icon Exchange"></i>Trade</button></a>
+        <a href="<?=$baseUrl."/trade/message"?>"><button  class="ui blue button small"><i class="icon mail"></i>Message</button></a>
+        <a href="<?=$baseUrl."/trade/check"?>"><button  class="ui blue button small"><i class="icon Write Square"></i>Check</button></a>
+        <div  class="ui horizontal list topcorner">
+          <div class="item">
+            <img class="ui mini circular image" src="<?=$baseUrl.$user['img']?>">
+              <div class="content">
+                <div class="ui sub header">TEAM</div>
+                <?= $user['name'] ?>
+              </div>
+            </div>
+          </div>
+          <a href="<?=$baseUrl."/auth/logout"?>"><button  class="ui blue button small" style="float: right;"><i class="icon lock in"></i>Logout</button></a>
         </div>
     </div>
   </div>
@@ -173,8 +173,8 @@ $baseUrl = \Yii::getAlias('@web');
 <div class="ui grid">
     <div class="three wide column"></div>
     <div class="four wide column">
-      <button class="ui green button"><i class="save icon"></i> Save</button></form>
-      <button class="ui grey button"><i class="remove circle outline icon"></i> Cancel</button>
+      <button class="ui blue button"><i class="save icon"></i> Save</button></form>
+      <button class="ui blue button"><i class="remove circle outline icon"></i> Cancel</button>
     </div>
 
 

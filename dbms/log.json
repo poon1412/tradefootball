@@ -5,7 +5,7 @@
 	"_idsend":6,
 	"_idget":1,
 	"price":554000000,
-	"status" :"accept"
+	"status" :"Waiting"
 	},
   {
 	"_id":2,
@@ -13,7 +13,7 @@
 	"_idsend":3,
 	"_idget":6,
 	"price":363000000,
-	"status" :"accept"
+	"status" :"Waiting"
 	},
   {
 	"_id":3,
@@ -21,7 +21,7 @@
 	"_idsend":2,
 	"_idget":1,
 	"price":272000000,
-	"status" :"accept"
+	"status" :"Waiting"
 	},
   {
 	"_id":4,
@@ -29,7 +29,7 @@
 	"_idsend":5,
 	"_idget":4,
 	"price":181000000,
-	"status" :"accept"
+	"status" :"Waiting"
 	},
   {
 	"_id":5,
@@ -37,6 +37,6 @@
 	"_idsend":6,
 	"_idget":13,
 	"price":690000000,
-	"status" :"accept"
+	"status" :"Waiting"
 	}
 ]

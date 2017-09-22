@@ -48,9 +48,10 @@ $this->title = 'HOME';
        </div>
   </div>
   <div class="column" id="outPopUp2">
-    <div class="ui inverted blue button huge" >
+    <!-- <div class="ui inverted blue button huge" >
       <a href="<?=$baseUrl."/home/site"?>">Enter  site</a>
       <i class="right Trophy icon"></i>
-    </div>
+    </div> -->
+    <a href="<?=$baseUrl."/home/site"?>"><button class="ui inverted blue button huge">Enter  site<i class="right Trophy icon"></i></button></a>
   </div>
 </div>

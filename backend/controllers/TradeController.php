@@ -29,18 +29,20 @@ class TradeController extends Controller
         }
         $request = Yii::$app->request;
         $search = $request->get('search',null);
-
+        $id=$session->get('user')['_id'];
         $query = Player::find();
         if($search != null){
           $query->where(["name" => $search]);
         }
         $result = $query->all();
         $pagination = new Pagination([
-                    'defaultPageSize' => 7,
-                    'totalCount' => $query->count(),
+                    'defaultPageSize' => 5,
+                    'totalCount' => $query->where(['<>','_idteam',$id])->count(),
                 ]);
 
-                $result = $query->offset($pagination->offset)
+                $result = $query->where(['<>','_idteam',$id])
+                    ->orderBy('_id')
+                    ->offset($pagination->offset)
                     ->limit($pagination->limit)
                     ->all();
 
@@ -77,14 +79,16 @@ class TradeController extends Controller
         {
           return $this->redirect($baseUrl.'/auth/login');
         }
+        $id=$session->get('user')['_id'];
         $query = Log::find();
         $result = $query->all();
+        $q = $query->where(["_idget" => $id]);
         $pagination = new Pagination([
                     'defaultPageSize' => 4,
-                    'totalCount' => $query->count(),
+                    'totalCount' => $q->count(),
                 ]);
 
-                $result = $query->orderBy('_id')
+                $result = $q->orderBy('_id')
                     ->offset($pagination->offset)
                     ->limit($pagination->limit)
                     ->all();
@@ -174,14 +178,16 @@ class TradeController extends Controller
         {
           return $this->redirect($baseUrl.'/auth/login');
         }
+        $id=$session->get('user')['_id'];
         $query = Log::find();
         $result = $query->all();
+        $q = $query->where(["_idsend" => $id]);
         $pagination = new Pagination([
                     'defaultPageSize' => 4,
-                    'totalCount' => $query->count(),
+                    'totalCount' => $q->count(),
                 ]);
 
-                $result = $query->orderBy('_id')
+                $result = $q->orderBy('_id')
                     ->offset($pagination->offset)
                     ->limit($pagination->limit)
                     ->all();

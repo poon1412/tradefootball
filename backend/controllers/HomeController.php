@@ -91,7 +91,7 @@ public function behaviors()
     	}
     	$result = $query->all();
       $pagination = new Pagination([
-                  'defaultPageSize' => 10,
+                  'defaultPageSize' => 8,
                   'totalCount' => $query->count(),
               ]);
 

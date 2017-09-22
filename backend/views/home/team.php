@@ -22,9 +22,9 @@ $baseUrl = \Yii::getAlias('@web');
 	<br></br>
 	<br></br>
     <div class="" id="logout" >
-      			<button id="img-btn3" class="ui yellow button inverted">  <a href="<?=$baseUrl."/auth/login"?>" >Login</a></button>
+    <a href="<?=$baseUrl."/auth/login"?>" ><button id="img-btn3" class="ui yellow button inverted">Login</button></a>
     </div><br><br><br>
-    <button id="img-btn2" class="ui yellow button"><a href="<?=$baseUrl."/home/player"?>" ><i class="icon user"></i>Player</a></button>
+    <a href="<?=$baseUrl."/home/player"?>" ><button id="img-btn2" class="ui yellow button">Player</button></a>
 
 </div>
 

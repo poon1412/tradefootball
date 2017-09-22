@@ -71,8 +71,7 @@ public function behaviors()
       {
         return $this->redirect($baseUrl.'/auth/login');
       }
-      $user = $session->get('user');
-      $id = (int)$user['_id'];
+      $id = $session->get('user')['_id'];
       $request = Yii::$app->request;
       $search = $request->get('search',null);
 
@@ -85,10 +84,10 @@ public function behaviors()
 
       $pagination = new Pagination([
                   'defaultPageSize' => 5,
-                  'totalCount' => $query->count(),
+                  'totalCount' => $result->count(),
               ]);
 
-              $result = $query->orderBy('_id')
+              $result = $result->orderBy('_id')
                   ->offset($pagination->offset)
                   ->limit($pagination->limit)
                   ->all();
@@ -120,7 +119,7 @@ public function behaviors()
       $height = $request->get('height',null);
       $D_M_Y = $request->get('D_M_Y',null);
       $position = $request->get('position',null);
-      $number = $request->get('number',null);
+      $number = (int)$request->get('number',null);
       $country = $request->get('country',null);
 
       if($id == null){
@@ -212,6 +211,7 @@ public function behaviors()
       $this->layout = "@backend/themes/new/index";
       return $this->render('addplayer');
     }
+
 
 
 

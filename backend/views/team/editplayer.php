@@ -1,5 +1,6 @@
 <?php
-
+$session = Yii::$app->session;
+$user = $session->get('user');
 /* @var $this yii\web\View */
 
 $this->title = 'index';
@@ -7,26 +8,14 @@ $this->registerCssFile ( "@web/assets/semantic/semantic.min.css" );
 $this->registerJsFile('@web/assets/semantic/semantic.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
 $baseUrl = \Yii::getAlias('@web');
 ?>
-
-<div class="ui container">
-  <div class="ui grid">
-    <div class="four wide column"></div>
-    <div class="four wide column"></div>
-    <div class="four wide column"></div>
-    <div class="four wide column ">
-      <div class="ui horizontal list " style="float: right;">
-        <div class="item" >
-          <img class="ui mini circular image" src="/images/avatar2/small/molly.png">
-            <div class="content">
-              <div class="ui sub header">Molly</div>
-                Coordinator
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-<!-- main nav -->
+<style type="text/css">
+ .topcorner{
+   position:absolute;
+   top:10;
+   right:0;
+  }
+</style>
+<!-- main nav --><br>
 <div class="ui container">
 <div class="ui grid">
   <div class="column">
@@ -35,11 +24,21 @@ $baseUrl = \Yii::getAlias('@web');
         <a href="<?=$baseUrl."/team"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
         <div class="three column">
           <br><br><br> &nbsp;&nbsp;&nbsp;
-          <button  class="ui blue button small"><i class="icon user"></i>Player</button>
-          <button  class="ui blue button small"><i class="icon Soccer"></i>Team</button>
-          <button  class="ui blue button small"><i class="icon Exchange"></i>Trade</button>
-          <button  class="ui blue button small"><i class="icon mail"></i>Message</button>
-          <button  class="ui blue button small" style="float: right;"><i class="icon lock in"></i>Logout</button>
+          <a href="<?=$baseUrl."/team/player"?>"><button  class="ui blue button small"><i class="icon user"></i>Player</button></a>
+        <a href="<?=$baseUrl."/team/editteam"?>"><button  class="ui blue button small"><i class="icon Soccer"></i>Team</button></a>
+        <a href="<?=$baseUrl."/trade"?>"><button  class="ui blue button small"><i class="icon Exchange"></i>Trade</button></a>
+        <a href="<?=$baseUrl."/trade/message"?>"><button  class="ui blue button small"><i class="icon mail"></i>Message</button></a>
+        <a href="<?=$baseUrl."/trade/check"?>"><button  class="ui blue button small"><i class="icon Write Square"></i>Check</button></a>
+          <div  class="ui horizontal list topcorner">
+            <div class="item">
+              <img class="ui mini circular image" src="<?=$baseUrl.$user['img']?>">
+                <div class="content">
+                  <div class="ui sub header">TEAM</div>
+                  <?= $user['name'] ?>
+                </div>
+              </div>
+            </div>
+          <a href="<?=$baseUrl."/auth/logout"?>"><button  class="ui blue button small" style="float: right;"><i class="icon lock in"></i>Logout</button></a>
         </div>
     </div>
   </div>
@@ -208,11 +207,20 @@ $baseUrl = \Yii::getAlias('@web');
       <div class="ui form">
         <div class="inline field">
           <label>Number</label>
-          <input type="number" name="number" size="3" placeholder="Shirt Number" value="<?=$model['number']?>">
+          <input type="text" name="number" size="30" placeholder="Shirt Number" value="<?=$model['number']?>">
         </div>
       </div>
     </div>
 
+    <div class="three wide column">
+      <div class="ui form">
+        <div class="inline field">
+          <label>Country</label>
+          <input type="text" name="country" size="30" placeholder="Country" value="<?=$model['country']?>">
+        </div>
+      </div>
+    </div>
+<!--
     <div class="one wide column">
       <div class="five wide column">
         <div class="ui form ">
@@ -222,7 +230,7 @@ $baseUrl = \Yii::getAlias('@web');
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 

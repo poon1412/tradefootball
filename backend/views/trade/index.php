@@ -33,7 +33,13 @@ $baseUrl = \Yii::getAlias('@web');
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
+<style type="text/css">
+ .topcorner{
+   position:absolute;
+   top:10;
+   right:0;
+  }
+</style>
 <!-- top main -->
 <!-- <div class="ui grid">
   <div class="four wide column"></div>
@@ -53,25 +59,7 @@ $baseUrl = \Yii::getAlias('@web');
 </div> -->
 <!-- end top main -->
 
-<div class="ui container">
-  <div class="ui grid">
-    <div class="four wide column"></div>
-    <div class="four wide column"></div>
-    <div class="four wide column"></div>
-    <div class="four wide column ">
-      <div class="ui horizontal list " style="float: right;">
-        <div class="item" >
-          <img class="ui mini circular image" src="/images/avatar2/small/molly.png">
-            <div class="content">
-              <div class="ui sub header">Molly</div>
-                Coordinator
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-<!-- main nav -->
+<!-- main nav --><br>
 <div class="ui container">
 <div class="ui grid">
   <div class="column">
@@ -80,11 +68,21 @@ $baseUrl = \Yii::getAlias('@web');
         <a href="<?=$baseUrl."/team"?>"><img src="<?=$baseUrl."/assets/logo/logo.png"?>" width=150 height=100 ALIGN="LEFT" alt=""></a>
         <div class="three column">
           <br><br><br> &nbsp;&nbsp;&nbsp;
-          <button  class="ui blue button big"><i class="icon user"></i>Player</button>
-          <button  class="ui blue button big"><i class="icon Soccer"></i>Team</button>
-          <button  class="ui blue button big"><i class="icon Exchange"></i>Trade</button>
-          <button  class="ui blue button big"><i class="icon mail"></i>Message</button>
-          <button  class="ui blue button big" style="float: right;"><i class="icon lock in"></i>Logout</button>
+          <a href="<?=$baseUrl."/team/player"?>"><button  class="ui blue button big"><i class="icon user"></i>Player</button></a>
+        <a href="<?=$baseUrl."/team/editteam"?>"><button  class="ui blue button big"><i class="icon Soccer"></i>Team</button></a>
+        <!-- <a href="<?=$baseUrl."/trade"?>"><button  class="ui blue button small"><i class="icon Exchange"></i>Trade</button></a> -->
+        <a href="<?=$baseUrl."/trade/message"?>"><button  class="ui blue button big"><i class="icon mail"></i>Message</button></a>
+        <a href="<?=$baseUrl."/trade/check"?>"><button  class="ui blue button big"><i class="icon Write Square"></i>Check</button></a>
+          <div  class="ui horizontal list topcorner">
+            <div class="item">
+              <img class="ui mini circular image" src="<?=$baseUrl.$user['img']?>">
+                <div class="content">
+                  <div class="ui sub header">TEAM</div>
+                  <?= $user['name'] ?>
+                </div>
+              </div>
+            </div>
+          <a href="<?=$baseUrl."/auth/logout"?>"><button  class="ui blue button big" style="float: right;"><i class="icon lock in"></i>Logout</button></a>
         </div>
     </div>
   </div>
@@ -100,16 +98,17 @@ $baseUrl = \Yii::getAlias('@web');
   <div class="four wide column"></div>
   <div class="four wide column"></div>
 
+    <form class="" action="" method="get">
   <div class="ui category search">
   <div class="ui icon input">
-    <form class="" action="" method="get">
+
     <input class="prompt" type="text" name="search" placeholder="Search...">
     <i class="search icon"></i>
-    </form>
+
   </div>
   <div class="results"></div>
 </div>
-
+    </form>
 </div>
 <br>
   <table class="ui celled table">
@@ -130,7 +129,7 @@ $baseUrl = \Yii::getAlias('@web');
   </thead>
   <tbody>
     <?php foreach ($result as $var): ?>
-      <?php if ($var['_idteam']!=$user['_id']) {?>
+
         <tr>
           <td><?= $var['name'] ?></td>
           <td><?= $var['lname'] ?></td>
@@ -149,7 +148,7 @@ $baseUrl = \Yii::getAlias('@web');
             </form>
           </td>
         </tr>
-      <?php } ?>
+      
 
     <?php endforeach; ?>
   </tbody>

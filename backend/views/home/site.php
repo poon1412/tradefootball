@@ -47,10 +47,10 @@ $baseUrl = \Yii::getAlias('@web');
           <div class="three column">
             <br><br><br> &nbsp;&nbsp;&nbsp;
 
-            <button  class="ui blue button big"><a href="<?=$baseUrl."/home/player"?>" ><i class="icon user"></i>Player</a></button>
-            <button  class="ui blue button big"><a href="<?=$baseUrl."/home/team"?>" ><i class="icon Soccer"></i>Team</a></button>
+            <a href="<?=$baseUrl."/home/player"?>" ><button  class="ui blue button big"><i class="icon user"></i>Player</button></a>
+            <a href="<?=$baseUrl."/home/team"?>" ><button  class="ui blue button big"><i class="icon Soccer"></i>Team</button></a>
 
-            <button  class="ui blue button big" style="float: right;"><i class="icon lock in"></i><a href="<?=$baseUrl."/auth/login"?>" >Login</a></button>
+            <a href="<?=$baseUrl."/auth/login"?>" ><button  class="ui blue button big" style="float: right;"><i class="icon lock in"></i>Login</button></a>
           </div>
       </div>
     </div>
